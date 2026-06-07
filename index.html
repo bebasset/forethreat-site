@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Forethreat — Offensive security and Penetration Testing as a Service. Authorized, scoped testing for web apps, networks, APIs, and Active Directory, plus 1-on-1 training and bootcamps. Evidence-driven reporting and real-world attack-path analysis." />
+  <meta name="robots" content="index,follow" />
+  <meta property="og:title" content="Forethreat — Offensive Security & PTaaS" />
+  <meta property="og:description" content="We show you how you'd actually get breached — before someone else does. Web, Network, API & Active Directory penetration testing, plus training and bootcamps." />
+  <meta property="og:type" content="website" />
+  <title>Forethreat — Offensive Security & PTaaS</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- NAV -->
+  <div class="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="index.html">
+        <img src="assets/logo.svg" alt="Forethreat" />
+        <span>Forethreat</span>
+      </a>
+      <div class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#baseline">Free Baseline</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="training.html">Training</a>
+        <a href="#why">Why Forethreat</a>
+        <a href="about.html">About</a>
+        <a href="#contact">Contact</a>
+        <a href="https://www.linkedin.com/in/belizaireb" target="_blank" rel="noopener">LinkedIn ↗</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="eyebrow">
+          <div class="line"></div>
+          <div>Forethreat · Authorized Testing Only</div>
+        </div>
+        <h1>Understand threats <span>before they strike.</span></h1>
+        <p class="sub">
+          Offensive security and <strong>Penetration Testing as a Service</strong> for web applications, networks, APIs, and Active Directory.
+          We don't just list vulnerabilities — we show you <strong>how you'd actually get breached</strong>, and what it means for your business.
+          <br />
+          <span style="color:var(--muted2);">Securing the digital world by understanding threats before they strike.</span>
+        </p>
+        <div class="chips">
+          <span class="chip">Web Apps</span>
+          <span class="chip">Network</span>
+          <span class="chip">APIs</span>
+          <span class="chip">Active Directory</span>
+          <span class="chip">OWASP-aligned</span>
+          <span class="chip">Authorization required</span>
+        </div>
+        <div class="cta">
+          <a class="btn signal" href="#baseline">Start with a Free Baseline <small>↗</small></a>
+          <a class="btn" href="pricing.html">View pricing</a>
+          <a class="btn" href="#contact">Request scope &amp; quote</a>
+        </div>
+      </div>
+
+      <aside class="card" aria-label="What you get">
+        <div class="card-top">
+          <div>
+            <div class="card-title">What you get</div>
+            <div class="card-sub">Clear outcomes, clean reporting, real remediation.</div>
+          </div>
+          <div class="pill">Evidence-driven</div>
+        </div>
+        <div class="card-body">
+          <ul class="list">
+            <li><strong>Scoped testing</strong> aligned to business risk — not tool-spam.</li>
+            <li><strong>Reproduction steps</strong> + request/response evidence for every finding.</li>
+            <li><strong>Attack-path analysis</strong> showing how issues chain into a breach.</li>
+            <li><strong>Prioritized remediation</strong> your engineers can actually action.</li>
+          </ul>
+          <div class="micro">
+            <strong>Ethical note:</strong> Testing is performed only under explicit written authorization with an agreed scope and rules of engagement.
+          </div>
+        </div>
+      </aside>
+    </div>
+  </header>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <h2>Penetration Testing Services</h2>
+          <p class="lead">Scopable engagements for teams that need real validation, clear evidence, and fixes that stick.</p>
+        </div>
+      </div>
+      <div class="grid2">
+        <div class="svc">
+          <h3>Web Application Penetration Testing</h3>
+          <p><strong>Focus:</strong> authentication, session management, access control (IDOR/BOLA), input validation, file upload, business-logic abuse, and misconfigurations.</p>
+          <div class="tags"><span class="tag">OWASP Top 10</span><span class="tag">Auth/Session</span><span class="tag">Access Control</span><span class="tag">Burp Suite</span></div>
+        </div>
+        <div class="svc">
+          <h3>Network Penetration Testing</h3>
+          <p><strong>Focus:</strong> external &amp; internal attack-surface mapping, service enumeration, vulnerability validation, segmentation review, and hardening guidance.</p>
+          <div class="tags"><span class="tag">External</span><span class="tag">Internal</span><span class="tag">Enumeration</span><span class="tag">Nmap/Nessus</span></div>
+        </div>
+        <div class="svc">
+          <h3>API Penetration Testing</h3>
+          <p><strong>Focus:</strong> BOLA/IDOR, broken auth, token handling, mass assignment, rate limiting, and excessive data exposure across REST &amp; GraphQL.</p>
+          <div class="tags"><span class="tag">REST</span><span class="tag">GraphQL</span><span class="tag">BOLA/IDOR</span><span class="tag">JWT/Tokens</span></div>
+        </div>
+        <div class="svc">
+          <h3>Active Directory Penetration Testing</h3>
+          <p><strong>Focus:</strong> AD enumeration, credential attacks, Kerberos abuse, privilege escalation, lateral movement, and domain-compromise attack paths.</p>
+          <div class="tags"><span class="tag">Enumeration</span><span class="tag">Kerberos</span><span class="tag">PrivEsc</span><span class="tag">Lateral Movement</span></div>
+        </div>
+      </div>
+      <div class="cta" style="margin-top:16px;">
+        <a class="btn primary" href="pricing.html">See pricing &amp; packages</a>
+        <a class="btn" href="#contact">Request scope &amp; quote</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section id="process">
+    <div class="wrap">
+      <div class="section-head"><div><h2>Process</h2><p class="lead">Simple, professional, and predictable — from kickoff to retest.</p></div></div>
+      <div class="grid2">
+        <div class="step"><strong>1) Scope &amp; Rules of Engagement</strong><p>We define in-scope assets, authentication needs, timelines, and constraints, then I provide a written Scope &amp; Rules of Engagement plus a signed Authorization to Test before any testing begins.</p></div>
+        <div class="step"><strong>2) Recon &amp; Validation</strong><p>Attack-surface mapping and manual validation to confirm real impact — reducing false positives and focusing on what matters.</p></div>
+        <div class="step"><strong>3) Exploitation (Authorized)</strong><p>Controlled exploitation to safely demonstrate risk and gather evidence. No destructive testing unless explicitly approved in writing.</p></div>
+        <div class="step"><strong>4) Reporting &amp; Remediation</strong><p>A professional report: executive summary, technical findings with reproduction steps and evidence, CVSS severity, attack-path analysis, and prioritized fixes.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BASELINE (FREE) -->
+  <section id="baseline">
+    <div class="wrap">
+      <div class="section-head"><div><h2>Free Security Baseline Assessment</h2><p class="lead">A complimentary, focused engagement designed to uncover real risk in your environment — and show you what a full test would deliver.</p></div></div>
+      <div class="grid3">
+        <div class="svc"><h3>Focused Scope</h3><p>We test one asset — your primary web application <em>or</em> external network — to deliver meaningful, real results.</p></div>
+        <div class="svc"><h3>3–5 Real Vulnerabilities</h3><p>Exploitable findings supported by evidence — not automated scanner noise.</p></div>
+        <div class="svc"><h3>Executive Risk Summary</h3><p>A leadership-ready overview of exposure plus high-level remediation direction.</p></div>
+      </div>
+      <div class="micro" style="margin-top:14px;">
+        This is a limited assessment that demonstrates real exposure and points toward a full engagement. <strong>It is not a full penetration test.</strong> Authorization and scope agreement are still required.
+      </div>
+      <div class="cta" style="margin-top:16px;">
+        <a class="btn signal" href="#contact">Claim your free baseline <small>↗</small></a>
+        <a class="btn" href="pricing.html">Compare full packages</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRAINING TEASER -->
+  <section id="training">
+    <div class="wrap">
+      <div class="section-head"><div><h2>Training &amp; Bootcamps</h2><p class="lead">Learn offensive security from a working penetration tester — 1-on-1 mentorship and intensive bootcamps.</p></div></div>
+      <div class="grid2">
+        <div class="svc">
+          <h3>1-on-1 Remote Training</h3>
+          <p>Personalized, live remote coaching in penetration testing and ethical hacking — web, network, API, and AD. Hands-on labs, real methodology, exam prep (eJPT/OSCP/BSCP), and portfolio guidance.</p>
+          <div class="tags"><span class="tag">Live &amp; remote</span><span class="tag">Hands-on labs</span><span class="tag">Exam prep</span></div>
+        </div>
+        <div class="svc">
+          <h3>Bootcamps (1 week – 1 month)</h3>
+          <p>Structured, immersive programs that take you from fundamentals to a working methodology and a real report you can show employers. Available 1:1 or in small cohorts, with payment plans.</p>
+          <div class="tags"><span class="tag">1–4 weeks</span><span class="tag">Cohort or 1:1</span><span class="tag">Capstone report</span></div>
+        </div>
+      </div>
+      <div class="cta" style="margin-top:16px;">
+        <a class="btn primary" href="training.html">Explore training &amp; bootcamps</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY -->
+  <section id="why">
+    <div class="wrap">
+      <div class="section-head"><div><h2>Why Forethreat</h2><p class="lead">Most firms stop at identifying vulnerabilities. We show you how you get breached.</p></div></div>
+      <div class="grid3">
+        <div class="svc"><h3>Real Attack-Path Simulation</h3><p>We map how vulnerabilities chain together across your environment to demonstrate real-world breach scenarios.</p></div>
+        <div class="svc"><h3>Business-Impact Reporting</h3><p>Findings translated into clear risk and prioritization for stakeholders at every level — not just CVE lists.</p></div>
+        <div class="svc"><h3>Practitioner-Led</h3><p>Founder-led, ethical testing combining manual technique with targeted automation. eJPT certified; OSCP &amp; BSCP in progress.</p></div>
+      </div>
+      <div class="micro" style="margin-top:14px;">
+        "It's not about how many vulnerabilities exist — it's which ones actually put your business at risk."
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="wrap">
+      <div class="section-head"><div><h2>FAQ</h2><p class="lead">Quick answers to common questions.</p></div></div>
+      <div class="faq">
+        <details><summary>Do you require authorization?</summary><p>Always. I only test assets with explicit written authorization, an agreed scope, and signed rules of engagement. If you don't own the asset, we'll need authorization from the owner too.</p></details>
+        <details><summary>Will you sign an NDA?</summary><p>Yes. A mutual NDA and rules-of-engagement documentation are standard for every scoped engagement.</p></details>
+        <details><summary>Do you just run automated scanners?</summary><p>No. Engagements combine recon, manual validation, and authorized, controlled exploitation to confirm real impact and cut false positives.</p></details>
+        <details><summary>Do you offer retesting?</summary><p>Yes — retesting confirms your fixes worked. It's included in retainers and available as an add-on for one-off tests.</p></details>
+        <details><summary>How do I pay?</summary><p>Card or ACH via secure Stripe links/invoices, or PayPal. One-off projects, monthly installments, and prepaid retainers are all supported. See <a href="pricing.html" class="accent">Pricing</a>.</p></details>
+        <details><summary>Are you taking on free/pro-bono clients?</summary><p>As a growing practice, yes — the Free Baseline Assessment lets you experience the quality at no cost, with paid options when you're ready to go deeper.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="wrap">
+      <div class="section-head"><div><h2>Contact</h2><p class="lead">Send your scope and timeframe — I'll reply with clarifying questions and a quote.</p></div></div>
+      <div class="contact">
+        <div class="contact-box">
+          <h3 style="margin:0 0 6px;">Request a scope &amp; quote</h3>
+          <p>Include: company name, target assets, desired test type (Web / Network / API / AD), authentication availability, and preferred timeframe.</p>
+          <div class="contact-actions">
+            <a class="btn signal" href="mailto:bassette.secure@gmail.com?subject=Forethreat%20-%20Request%20Scope%20%26%20Quote&body=Company%3A%0AAsset(s)%3A%0ATesting%20type%20(Web%2FNetwork%2FAPI%2FAD)%3A%0AAuth%20available%3F%20(Yes%2FNo)%3A%0ATimeframe%3A%0AConstraints%2FNotes%3A%0A">Email for a quote <small>↗</small></a>
+            <a class="btn" href="https://www.linkedin.com/in/belizaireb" target="_blank" rel="noopener">Message on LinkedIn ↗</a>
+          </div>
+          <div class="micro"><strong>Legal &amp; ethical:</strong> No testing outside explicit authorization. Unsure what to authorize? Ask — I'll help you scope safely.</div>
+        </div>
+        <div class="contact-box">
+          <h3 style="margin:0 0 6px;">Founder-led</h3>
+          <p>Forethreat is a practitioner-led offensive security practice founded by <strong>Belizaire Bassette II</strong> — a penetration tester delivering scoped testing with clear reporting and remediation guidance.</p>
+          <p style="margin-top:10px;color:var(--muted2);">Prefer a call? We can meet via Zoom or Google Meet to discuss your environment and proposal.</p>
+          <div class="contact-actions">
+            <a class="btn" href="about.html">About the founder ↗</a>
+            <a class="btn" href="https://bebasset.github.io/" target="_blank" rel="noopener">Technical portfolio ↗</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="foot">
+    <div class="wrap foot-row">
+      <div style="display:flex; align-items:center; gap:10px;">
+        <img src="assets/logo.svg" alt="" width="28" height="28" />
+        <div>
+          <div style="font-weight:700;color:rgba(255,255,255,.88);">Forethreat</div>
+          <div style="font-size:.9rem;">Authorized testing only · Evidence-driven reporting</div>
+        </div>
+      </div>
+      <div class="mini-links">
+        <a href="#services">Services</a>
+        <a href="#baseline">Free Baseline</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="training.html">Training</a>
+        <a href="about.html">About</a>
+        <a href="legal.html">Legal</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+    <div class="wrap" style="margin-top:14px;font-size:.82rem;color:var(--muted2);">
+      © <span id="yr">2026</span> Forethreat Security LLC. Securing the digital world by understanding threats before they strike. ·
+      <a href="legal.html" class="accent">Terms &amp; legal</a>
+    </div>
+  </footer>
+  <script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
+</body>
+</html>

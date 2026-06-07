@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="About Forethreat — founded by Belizaire Bassette II, an offensive security practitioner and penetration tester. Practitioner-led, evidence-driven testing." />
+  <title>About — Forethreat</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="index.html"><img src="assets/logo.svg" alt="Forethreat" /><span>Forethreat</span></a>
+      <div class="nav-links">
+        <a href="index.html#services">Services</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="training.html">Training</a>
+        <a href="about.html" class="active">About</a>
+        <a href="index.html#contact">Contact</a>
+        <a href="legal.html">Legal</a>
+      </div>
+    </div>
+  </div>
+
+  <header class="hero">
+    <div class="wrap">
+      <div class="eyebrow"><div class="line"></div><div>About · Practitioner-Led</div></div>
+      <h1>Founded by a <span>working penetration tester.</span></h1>
+      <p class="sub" style="max-width:74ch;">Forethreat is a focused, founder-led offensive security practice. Every engagement is delivered by a hands-on practitioner who lives in Burp Suite and on the command line — not handed to a junior behind a logo.</p>
+    </div>
+  </header>
+
+  <section>
+    <div class="wrap">
+      <div class="grid2">
+        <div class="svc">
+          <h3>Belizaire Bassette II — Founder &amp; Lead Penetration Tester</h3>
+          <p>Belizaire is an offensive security practitioner and penetration tester who built his craft inside a Penetration Testing as a Service (PTaaS) consulting environment. Across five client engagements he identified <strong>73 vulnerabilities</strong> — including high-impact findings such as IDOR/BOLA, stored and reflected XSS, arbitrary file upload, CSRF, and mass assignment — each documented with proof-of-concept exploits and business-impact-driven reporting. He was promoted from intern to <strong>Junior Penetration Tester</strong> on the strength of his findings and the quality of his client deliverables.</p>
+          <p style="margin-top:10px;">He founded Forethreat on a simple belief: most reports stop at <em>what</em> is broken. Clients deserve to understand <em>how</em> an attacker would actually chain those issues into a breach — and which risks genuinely threaten the business.</p>
+        </div>
+        <div class="card">
+          <div class="card-top"><div><div class="card-title">Credentials &amp; focus</div><div class="card-sub">Offensive security, done by hand.</div></div><div class="pill">eJPT certified</div></div>
+          <div class="card-body">
+            <ul class="list">
+              <li><strong>Certifications:</strong> eJPT (INE). OSCP (Offensive Security) &amp; BSCP (PortSwigger) in progress.</li>
+              <li><strong>Education:</strong> B.S. Information Management &amp; Technology, Syracuse University — Information Security concentration, Computer Science minor.</li>
+              <li><strong>Specialties:</strong> Web app, Network, API, and Active Directory testing.</li>
+              <li><strong>Toolset:</strong> Burp Suite, Nmap, Nessus, Hydra, Metasploit; Python &amp; Bash.</li>
+              <li><strong>Frameworks:</strong> OWASP Top 10, MITRE ATT&amp;CK, NIST CSF.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-head" style="margin-top:34px;"><div><h2>Experience that translates to your risk</h2></div></div>
+      <div class="grid3">
+        <div class="svc"><h3>PTaaS consulting</h3><p>Black-box and gray-box testing across multiple web engagements, with CVSS-rated, reproduction-ready reports written for both leadership and engineers.</p></div>
+        <div class="svc"><h3>Regulated-data experience</h3><p>Prior IT risk &amp; compliance work included HIPAA-aligned access-control and policy audits and secure handling of sensitive data (PHI) — confidentiality treated as a baseline, not a checkbox.</p></div>
+        <div class="svc"><h3>Defensive perspective</h3><p>Enterprise network hardening (pfSense, DMZ redesign) and SOC-style alert triage — so remediation guidance is realistic, not theoretical.</p></div>
+      </div>
+
+      <div class="micro" style="margin-top:18px;">
+        “It's not about how many vulnerabilities exist — it's which ones actually put your business at risk.”
+      </div>
+
+      <div class="cta" style="margin-top:18px;">
+        <a class="btn signal" href="index.html#contact">Work with Forethreat ↗</a>
+        <a class="btn" href="https://www.linkedin.com/in/belizaireb" target="_blank" rel="noopener">LinkedIn ↗</a>
+        <a class="btn" href="https://bebasset.github.io/" target="_blank" rel="noopener">Technical portfolio ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="foot">
+    <div class="wrap foot-row">
+      <div style="display:flex; align-items:center; gap:10px;">
+        <img src="assets/logo.svg" alt="" width="28" height="28" />
+        <div><div style="font-weight:700;color:rgba(255,255,255,.88);">Forethreat</div><div style="font-size:.9rem;">Authorized testing only · Evidence-driven reporting</div></div>
+      </div>
+      <div class="mini-links">
+        <a href="index.html#services">Services</a><a href="pricing.html">Pricing</a><a href="training.html">Training</a><a href="about.html">About</a><a href="legal.html">Legal</a><a href="index.html#contact">Contact</a>
+      </div>
+    </div>
+    <div class="wrap" style="margin-top:14px;font-size:.82rem;color:var(--muted2);">© <span id="yr">2026</span> Forethreat Security LLC. Securing the digital world by understanding threats before they strike.</div>
+  </footer>
+  <script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
+</body>
+</html>
