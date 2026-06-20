@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Start here — Forethreat Security. Book a free mentorship intro call, start 1:1 ethical hacking mentorship, or claim a free security baseline assessment." />
+  <meta name="robots" content="index,follow" />
+  <meta property="og:title" content="Start Here — Forethreat Security" />
+  <meta property="og:description" content="1:1 ethical hacking mentorship and offensive security testing. Pick where to start 👇" />
+  <meta property="og:type" content="website" />
+  <title>Start Here — Forethreat</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Link-in-bio layout — mobile-first, centered, minimal */
+    body{ min-height:100vh; display:flex; flex-direction:column; }
+    .start{ flex:1; display:flex; align-items:center; justify-content:center; padding:40px 18px; }
+    .start-card{ width:100%; max-width:440px; text-align:center; }
+    .start-logo{ width:64px; height:64px; margin:0 auto 16px; display:block; }
+    .start-name{ font-size:1.5rem; font-weight:800; letter-spacing:-.01em; margin:0 0 6px; }
+    .start-tag{ color:var(--muted); margin:0 0 8px; font-size:.98rem; }
+    .start-sub{ color:var(--muted2); font-size:.9rem; margin:0 0 26px; }
+    .start-buttons{ display:flex; flex-direction:column; gap:14px; }
+    .start-buttons .btn{ width:100%; justify-content:center; padding:16px 18px; font-size:1rem; border-radius:16px; }
+    .btn-eyebrow{ display:block; font-size:.72rem; font-weight:700; letter-spacing:.06em; text-transform:uppercase; opacity:.7; }
+    .btn-stack{ display:flex; flex-direction:column; gap:3px; align-items:center; line-height:1.25; }
+    .start-foot{ margin-top:28px; display:flex; flex-wrap:wrap; gap:8px; justify-content:center; }
+    .start-foot a{ font-size:.85rem; color:var(--muted); padding:7px 11px; border-radius:999px; border:1px solid rgba(255,255,255,.10); background:rgba(255,255,255,.04); }
+    .start-foot a:hover{ color:var(--text); }
+    .start-note{ margin-top:18px; color:var(--muted2); font-size:.8rem; }
+  </style>
+</head>
+<body>
+  <main class="start">
+    <div class="start-card">
+      <img class="start-logo" src="assets/logo.svg" alt="Forethreat" />
+      <h1 class="start-name">Forethreat Security</h1>
+      <p class="start-tag">Think like an attacker. Defend like a professional.</p>
+      <p class="start-sub">Whether you want to <strong>break into offensive security</strong> or <strong>test your business</strong> — pick where to start 👇</p>
+
+      <div class="start-buttons">
+        <a class="btn signal" href="https://calendar.app.google/R3P8w9hY9GTtchQi7" target="_blank" rel="noopener">
+          <span class="btn-stack">
+            <span class="btn-eyebrow">Students &amp; career changers</span>
+            <span>📞 Book Free Mentorship Intro Call</span>
+          </span>
+        </a>
+
+        <a class="btn primary" href="training.html">
+          <span class="btn-stack">
+            <span class="btn-eyebrow">Ready to commit</span>
+            <span>🎯 Start 1:1 Hacking Mentorship</span>
+          </span>
+        </a>
+
+        <a class="btn" href="index.html#baseline">
+          <span class="btn-stack">
+            <span class="btn-eyebrow">Business owners</span>
+            <span>🛡️ Claim Free Security Baseline Assessment</span>
+          </span>
+        </a>
+      </div>
+
+      <div class="start-foot">
+        <a href="index.html">Home</a>
+        <a href="training.html">Training</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="about.html">About</a>
+        <a href="https://www.linkedin.com/in/belizaireb" target="_blank" rel="noopener">LinkedIn ↗</a>
+      </div>
+
+      <p class="start-note">Authorized testing only · Evidence-driven reporting</p>
+    </div>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap" style="text-align:center;font-size:.82rem;color:var(--muted2);">
+      © <span id="yr">2026</span> Forethreat Security LLC. Securing the digital world by understanding threats before they strike. ·
+      <a href="legal.html" class="accent">Terms &amp; legal</a>
+    </div>
+  </footer>
+  <script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
+</body>
+</html>
