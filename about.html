@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="About Forethreat — founded by Belizaire Bassette II, an offensive security practitioner and penetration tester. Practitioner-led, evidence-driven testing." />
+  <meta name="description" content="About Forethreat — founded by Belizaire Bassette II, a penetration testing and PTaaS firm led by certified offensive security practitioners." />
   <title>About — Forethreat</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
@@ -12,78 +12,127 @@
 <body>
   <div class="nav">
     <div class="wrap nav-inner">
-      <a class="brand" href="index.html"><img src="assets/logo.svg" alt="Forethreat" /><span>Forethreat</span></a>
+      <a class="brand" href="index.html"><img src="assets/logo.svg" alt="Forethreat" /><span>Forethreat Security</span></a>
       <div class="nav-links">
         <a href="index.html#services">Services</a>
+        <a href="index.html#process">Process</a>
         <a href="pricing.html">Pricing</a>
         <a href="training.html">Training</a>
         <a href="about.html" class="active">About</a>
-        <a href="index.html#contact">Contact</a>
-        <a href="legal.html">Legal</a>
+        <a class="nav-cta" href="index.html#contact">Book a call →</a>
       </div>
     </div>
   </div>
 
-  <header class="hero">
+  <header class="hero simple">
     <div class="wrap">
-      <div class="eyebrow"><div class="line"></div><div>About · Practitioner-Led</div></div>
-      <h1>Founded by a <span>working penetration tester.</span></h1>
-      <p class="sub" style="max-width:74ch;">Forethreat is a focused, founder-led offensive security practice. Every engagement is delivered by a hands-on practitioner who lives in Burp Suite and on the command line — not handed to a junior behind a logo.</p>
+      <div class="eyebrow"><div class="line"></div><div>About Forethreat Security</div></div>
+      <h1>Offensive security, <span>done by hand.</span></h1>
+      <p class="sub">Forethreat Security is a penetration testing and PTaaS firm. Our certified practitioners test the way real attackers do, then turn what we find into clear, prioritized action for your team.</p>
+      <div class="trustbar">
+        <div class="trust"><b>Practitioner-led</b><span>Your testers are also your point of contact</span></div>
+        <div class="trust"><b>Certified</b><span>BSCP · eJPT · OSCP in progress</span></div>
+        <div class="trust"><b>Authorized only</b><span>Written scope and sign-off before any testing</span></div>
+      </div>
     </div>
   </header>
 
-  <section>
-    <div class="wrap">
-      <div class="grid2">
-        <div class="svc">
-          <h3>Belizaire Bassette II — Founder &amp; Lead Penetration Tester</h3>
-          <p>Belizaire is an offensive security practitioner and penetration tester who built his craft inside a Penetration Testing as a Service (PTaaS) consulting environment. Across five client engagements he identified <strong>73 vulnerabilities</strong> — including high-impact findings such as IDOR/BOLA, stored and reflected XSS, arbitrary file upload, CSRF, and mass assignment — each documented with proof-of-concept exploits and business-impact-driven reporting. He was promoted from intern to <strong>Junior Penetration Tester</strong> on the strength of his findings and the quality of his client deliverables.</p>
-          <p style="margin-top:10px;">He founded Forethreat on a simple belief: most reports stop at <em>what</em> is broken. Clients deserve to understand <em>how</em> an attacker would actually chain those issues into a breach — and which risks genuinely threaten the business.</p>
-        </div>
-        <div class="card">
-          <div class="card-top"><div><div class="card-title">Credentials &amp; focus</div><div class="card-sub">Offensive security, done by hand.</div></div><div class="pill">eJPT certified</div></div>
-          <div class="card-body">
-            <ul class="list">
-              <li><strong>Certifications:</strong> eJPT (INE). OSCP (Offensive Security) &amp; BSCP (PortSwigger) in progress.</li>
-              <li><strong>Education:</strong> B.S. Information Management &amp; Technology, Syracuse University — Information Security concentration, Computer Science minor.</li>
-              <li><strong>Specialties:</strong> Web app, Network, API, and Active Directory testing.</li>
-              <li><strong>Toolset:</strong> Burp Suite, Nmap, Nessus, Hydra, Metasploit; Python &amp; Bash.</li>
-              <li><strong>Frameworks:</strong> OWASP Top 10, MITRE ATT&amp;CK, NIST CSF.</li>
-            </ul>
-          </div>
-        </div>
+  <section class="roomy">
+    <div class="wrap split">
+      <div>
+        <div class="kicker"><span class="num">01</span>Our mission</div>
+        <h2>Help businesses understand how they'd actually get breached.</h2>
+        <p class="lead" style="margin-top:12px;">Most security reports stop at a list of vulnerabilities. We go further and show how those issues chain together into a real attack, which ones threaten your business, and what to fix first.</p>
+        <p class="lead" style="margin-top:12px;">We work with small and mid-sized organizations that need enterprise-quality testing without enterprise overhead.</p>
       </div>
-
-      <div class="section-head" style="margin-top:34px;"><div><h2>Experience that translates to your risk</h2></div></div>
-      <div class="grid3">
-        <div class="svc"><h3>PTaaS consulting</h3><p>Black-box and gray-box testing across multiple web engagements, with CVSS-rated, reproduction-ready reports written for both leadership and engineers.</p></div>
-        <div class="svc"><h3>Regulated-data experience</h3><p>Prior IT risk &amp; compliance work included HIPAA-aligned access-control and policy audits and secure handling of sensitive data (PHI) — confidentiality treated as a baseline, not a checkbox.</p></div>
-        <div class="svc"><h3>Defensive perspective</h3><p>Enterprise network hardening (pfSense, DMZ redesign) and SOC-style alert triage — so remediation guidance is realistic, not theoretical.</p></div>
-      </div>
-
-      <div class="micro" style="margin-top:18px;">
-        “It's not about how many vulnerabilities exist — it's which ones actually put your business at risk.”
-      </div>
-
-      <div class="cta" style="margin-top:18px;">
-        <a class="btn signal" href="index.html#contact">Work with Forethreat ↗</a>
-        <a class="btn" href="https://www.linkedin.com/in/belizaireb" target="_blank" rel="noopener">LinkedIn ↗</a>
-        <a class="btn" href="https://bebasset.github.io/" target="_blank" rel="noopener">Technical portfolio ↗</a>
+      <div class="facts">
+        <div class="fact"><small>What we test</small><b>Web apps · APIs · Networks · Active Directory</b></div>
+        <div class="fact"><small>How we deliver</small><b>One-off tests, PTaaS retainers, training</b></div>
+        <div class="fact"><small>Frameworks</small><b>OWASP · MITRE ATT&amp;CK · NIST CSF · CVSS</b></div>
       </div>
     </div>
   </section>
 
-  <footer class="foot">
-    <div class="wrap foot-row">
-      <div style="display:flex; align-items:center; gap:10px;">
-        <img src="assets/logo.svg" alt="" width="28" height="28" />
-        <div><div style="font-weight:700;color:rgba(255,255,255,.88);">Forethreat</div><div style="font-size:.9rem;">Authorized testing only · Evidence-driven reporting</div></div>
-      </div>
-      <div class="mini-links">
-        <a href="index.html#services">Services</a><a href="pricing.html">Pricing</a><a href="training.html">Training</a><a href="about.html">About</a><a href="legal.html">Legal</a><a href="index.html#contact">Contact</a>
+  <section class="roomy">
+    <div class="wrap">
+      <div class="section-head"><div><div class="kicker"><span class="num">02</span>What we stand for</div><h2>Our principles</h2></div></div>
+      <div class="includes">
+        <div class="inc"><h3>Ethics first</h3><p>We never test without explicit written authorization and an agreed scope.</p></div>
+        <div class="inc"><h3>Proof over noise</h3><p>Every finding is validated by hand and backed by evidence.</p></div>
+        <div class="inc"><h3>Plain language</h3><p>Reports written for both leadership and engineers.</p></div>
+        <div class="inc"><h3>Confidentiality</h3><p>NDAs are standard. We never disclose client findings.</p></div>
+        <div class="inc"><h3>Defender's mindset</h3><p>Our background in hardening and compliance keeps fixes realistic.</p></div>
+        <div class="inc"><h3>Partnership</h3><p>We stay with you through remediation and retesting.</p></div>
       </div>
     </div>
-    <div class="wrap" style="margin-top:14px;font-size:.82rem;color:var(--muted2);">© <span id="yr">2026</span> Forethreat Security LLC. Securing the digital world by understanding threats before they strike.</div>
+  </section>
+
+  <section class="roomy">
+    <div class="wrap">
+      <div class="section-head"><div><div class="kicker"><span class="num">03</span>Leadership</div><h2>Who leads the work</h2></div></div>
+      <div class="split">
+        <div class="svc lg">
+          <h3>Belizaire Bassette II</h3>
+          <div style="color:var(--accent); font-weight:600; margin:-2px 0 10px;">Founder &amp; Lead Penetration Tester</div>
+          <p>Belizaire leads Forethreat's testing practice. He brings professional experience from a PTaaS consulting environment, running black-box and gray-box assessments of web applications, APIs, and networks. He specializes in access control, authentication, and server-side vulnerabilities. Before offensive security, he worked in IT risk and compliance, including HIPAA-aligned audits.</p>
+          <p style="margin-top:10px;">B.S. Information Management &amp; Technology, Syracuse University (Information Security, Computer Science minor). Represented Syracuse at the NCAE Cyber Games Regionals.</p>
+          <div class="cta" style="margin-top:14px;">
+            <a class="btn" href="https://www.linkedin.com/in/belizaireb" target="_blank" rel="noopener">LinkedIn ↗</a>
+            <a class="btn" href="https://bebasset.github.io/" target="_blank" rel="noopener">Technical portfolio ↗</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-top"><div><div class="card-title">Certifications</div><div class="card-sub">Industry-recognized, hands-on exams.</div></div></div>
+          <div class="card-body">
+            <div class="badges">
+              <div class="badge-cert"><b>BSCP</b><span>Burp Suite Certified Practitioner · PortSwigger</span></div>
+              <div class="badge-cert"><b>eJPT</b><span>Junior Penetration Tester · INE</span></div>
+              <div class="badge-cert wip"><b>OSCP</b><span>In progress · OffSec</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="cta" style="margin-top:30px; justify-content:center;">
+        <a class="btn signal" href="index.html#contact">Book a discovery call →</a>
+        <a class="btn" href="pricing.html">View pricing</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="foot">
+    <div class="wrap foot-cols">
+      <div>
+        <div style="display:flex; align-items:center; gap:10px; margin-bottom:10px;">
+          <img src="assets/logo.svg" alt="" width="28" height="28" />
+          <div style="font-weight:700;color:rgba(255,255,255,.9);">Forethreat Security</div>
+        </div>
+        <div style="font-size:.9rem; max-width:34ch;">Understand threats before they strike. Authorized offensive security testing and training.</div>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <a href="index.html#services">Penetration Testing</a>
+        <a href="pricing.html">PTaaS &amp; Retainers</a>
+        <a href="index.html#baseline">Free Baseline</a>
+        <a href="training.html">Training</a>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <a href="about.html">About</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="legal.html">Terms &amp; Legal</a>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <a href="mailto:belizaire@forethreatsec.com">Email us</a>
+        <a href="https://www.linkedin.com/in/belizaireb" target="_blank" rel="noopener">LinkedIn ↗</a>
+        <a href="index.html#contact">Book a call</a>
+      </div>
+    </div>
+    <div class="wrap foot-bottom">
+      <span>© <span id="yr">2026</span> Forethreat Security LLC. All rights reserved.</span>
+      <span>Authorized testing only · Evidence-driven reporting</span>
+    </div>
   </footer>
   <script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
 </body>

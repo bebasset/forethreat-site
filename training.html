@@ -12,14 +12,14 @@
 <body>
   <div class="nav">
     <div class="wrap nav-inner">
-      <a class="brand" href="index.html"><img src="assets/logo.svg" alt="Forethreat" /><span>Forethreat</span></a>
+      <a class="brand" href="index.html"><img src="assets/logo.svg" alt="Forethreat" /><span>Forethreat Security</span></a>
       <div class="nav-links">
         <a href="index.html#services">Services</a>
+        <a href="index.html#process">Process</a>
         <a href="pricing.html">Pricing</a>
         <a href="training.html" class="active">Training</a>
         <a href="about.html">About</a>
-        <a href="index.html#contact">Contact</a>
-        <a href="legal.html">Legal</a>
+        <a class="nav-cta" href="index.html#contact">Book a call →</a>
       </div>
     </div>
   </div>
@@ -28,7 +28,7 @@
     <div class="wrap">
       <div class="eyebrow"><div class="line"></div><div>Training · Ethical Hacking &amp; Pentesting</div></div>
       <h1>Learn to <span>think like an attacker.</span></h1>
-      <p class="sub" style="max-width:72ch;">Live, remote, 1-on-1 coaching and immersive bootcamps taught by a working penetration tester. Real methodology, hands-on labs, and a capstone report you can show employers — not just slides. Beginner-friendly through OSCP-prep.</p>
+      <p class="sub" style="max-width:72ch;">Live, remote, 1-on-1 coaching and immersive bootcamps taught by a working, BSCP &amp; eJPT certified penetration tester. Real methodology, hands-on labs, and a capstone report you can show employers — not just slides. Beginner-friendly through OSCP-prep.</p>
       <div class="chips">
         <span class="chip">Web</span><span class="chip">Network</span><span class="chip">API</span><span class="chip">Active Directory</span><span class="chip">eJPT / OSCP / BSCP prep</span><span class="chip">Career &amp; portfolio</span>
       </div>
@@ -139,17 +139,40 @@
     </div>
   </section>
 
+  <!-- FOOTER -->
   <footer class="foot">
-    <div class="wrap foot-row">
-      <div style="display:flex; align-items:center; gap:10px;">
-        <img src="assets/logo.svg" alt="" width="28" height="28" />
-        <div><div style="font-weight:700;color:rgba(255,255,255,.88);">Forethreat</div><div style="font-size:.9rem;">Authorized testing only · Evidence-driven reporting</div></div>
+    <div class="wrap foot-cols">
+      <div>
+        <div style="display:flex; align-items:center; gap:10px; margin-bottom:10px;">
+          <img src="assets/logo.svg" alt="" width="28" height="28" />
+          <div style="font-weight:700;color:rgba(255,255,255,.9);">Forethreat Security</div>
+        </div>
+        <div style="font-size:.9rem; max-width:34ch;">Understand threats before they strike. Authorized offensive security testing and training.</div>
       </div>
-      <div class="mini-links">
-        <a href="index.html#services">Services</a><a href="pricing.html">Pricing</a><a href="training.html">Training</a><a href="about.html">About</a><a href="legal.html">Legal</a><a href="index.html#contact">Contact</a>
+      <div>
+        <h4>Services</h4>
+        <a href="index.html#services">Penetration Testing</a>
+        <a href="pricing.html">PTaaS &amp; Retainers</a>
+        <a href="index.html#baseline">Free Baseline</a>
+        <a href="training.html">Training</a>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <a href="about.html">About</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="legal.html">Terms &amp; Legal</a>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <a href="mailto:belizaire@forethreatsec.com">Email us</a>
+        <a href="https://www.linkedin.com/in/belizaireb" target="_blank" rel="noopener">LinkedIn ↗</a>
+        <a href="index.html#contact">Book a call</a>
       </div>
     </div>
-    <div class="wrap" style="margin-top:14px;font-size:.82rem;color:var(--muted2);">© <span id="yr">2026</span> Forethreat Security LLC. Securing the digital world by understanding threats before they strike.</div>
+    <div class="wrap foot-bottom">
+      <span>© <span id="yr">2026</span> Forethreat Security LLC. All rights reserved.</span>
+      <span>Authorized testing only · Evidence-driven reporting</span>
+    </div>
   </footer>
   <script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
 </body>

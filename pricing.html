@@ -12,14 +12,14 @@
 <body>
   <div class="nav">
     <div class="wrap nav-inner">
-      <a class="brand" href="index.html"><img src="assets/logo.svg" alt="Forethreat" /><span>Forethreat</span></a>
+      <a class="brand" href="index.html"><img src="assets/logo.svg" alt="Forethreat" /><span>Forethreat Security</span></a>
       <div class="nav-links">
         <a href="index.html#services">Services</a>
+        <a href="index.html#process">Process</a>
         <a href="pricing.html" class="active">Pricing</a>
         <a href="training.html">Training</a>
         <a href="about.html">About</a>
-        <a href="index.html#contact">Contact</a>
-        <a href="legal.html">Legal</a>
+        <a class="nav-cta" href="index.html#contact">Book a call →</a>
       </div>
     </div>
   </div>
@@ -40,7 +40,7 @@
         <h3 style="margin-bottom:4px;">Founding Client Program — limited intro pricing</h3>
         <p class="note" style="margin-bottom:10px;">We're onboarding a small number of founding clients. In exchange for a short testimonial or reference on completion, you get <strong style="color:#fff;">15–20% off</strong> your first engagement — same depth, same reporting, same quality.</p>
         <ul style="margin-bottom:0;">
-          <li>Limited spots, so every engagement gets full founder attention</li>
+          <li>Limited spots, so every engagement gets senior, hands-on attention</li>
           <li>Lock in founding rates before standard pricing applies</li>
           <li>Applies to any one-off test, retainer, or bootcamp below</li>
         </ul>
@@ -146,13 +146,13 @@
         <div class="price">
           <h3>PTaaS / Enterprise</h3>
           <p class="from">from $4,500 <small>/ month</small></p>
-          <p class="note">Continuous testing retainer — founder-led, capacity-limited</p>
+          <p class="note">Continuous testing retainer — senior-led, capacity-limited</p>
           <ul><li>Ongoing, attacker-driven testing across your assets</li><li>Every new feature/update tested as it ships</li><li>Priority support &amp; rapid retesting</li><li>Attestation letters; reporting portal on the roadmap</li></ul>
-          <a class="btn" href="index.html#contact">Talk to founder</a>
+          <a class="btn" href="index.html#contact">Talk to our team</a>
         </div>
       </div>
       <div class="micro" style="margin-top:14px;">
-        <strong>Limited capacity:</strong> as a founder-led practice, only a few retainer clients are taken at a time — each gets direct, senior attention. &nbsp;·&nbsp;
+        <strong>Limited capacity:</strong> to protect quality, only a few retainer clients are taken at a time — each gets direct, senior attention. &nbsp;·&nbsp;
         <strong>One-time onboarding fee:</strong> $750 (waived on 12-month prepay). &nbsp;·&nbsp;
         <strong>Prepay a year, get 2 months free</strong> (≈16% off). &nbsp;·&nbsp;
         Retainers are billed monthly via secure Stripe subscription, or invoiced quarterly/annually (ACH preferred).
@@ -203,17 +203,40 @@
     </div>
   </section>
 
+  <!-- FOOTER -->
   <footer class="foot">
-    <div class="wrap foot-row">
-      <div style="display:flex; align-items:center; gap:10px;">
-        <img src="assets/logo.svg" alt="" width="28" height="28" />
-        <div><div style="font-weight:700;color:rgba(255,255,255,.88);">Forethreat</div><div style="font-size:.9rem;">Authorized testing only · Evidence-driven reporting</div></div>
+    <div class="wrap foot-cols">
+      <div>
+        <div style="display:flex; align-items:center; gap:10px; margin-bottom:10px;">
+          <img src="assets/logo.svg" alt="" width="28" height="28" />
+          <div style="font-weight:700;color:rgba(255,255,255,.9);">Forethreat Security</div>
+        </div>
+        <div style="font-size:.9rem; max-width:34ch;">Understand threats before they strike. Authorized offensive security testing and training.</div>
       </div>
-      <div class="mini-links">
-        <a href="index.html#services">Services</a><a href="pricing.html">Pricing</a><a href="training.html">Training</a><a href="about.html">About</a><a href="legal.html">Legal</a><a href="index.html#contact">Contact</a>
+      <div>
+        <h4>Services</h4>
+        <a href="index.html#services">Penetration Testing</a>
+        <a href="pricing.html">PTaaS &amp; Retainers</a>
+        <a href="index.html#baseline">Free Baseline</a>
+        <a href="training.html">Training</a>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <a href="about.html">About</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="legal.html">Terms &amp; Legal</a>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <a href="mailto:belizaire@forethreatsec.com">Email us</a>
+        <a href="https://www.linkedin.com/in/belizaireb" target="_blank" rel="noopener">LinkedIn ↗</a>
+        <a href="index.html#contact">Book a call</a>
       </div>
     </div>
-    <div class="wrap" style="margin-top:14px;font-size:.82rem;color:var(--muted2);">© <span id="yr">2026</span> Forethreat Security LLC. Securing the digital world by understanding threats before they strike.</div>
+    <div class="wrap foot-bottom">
+      <span>© <span id="yr">2026</span> Forethreat Security LLC. All rights reserved.</span>
+      <span>Authorized testing only · Evidence-driven reporting</span>
+    </div>
   </footer>
   <script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
 </body>
