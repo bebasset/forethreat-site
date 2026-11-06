@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://plausible.io https://static.cloudflareinsights.com; connect-src 'self' https://formspree.io https://api.web3forms.com https://plausible.io https://cloudflareinsights.com; img-src 'self' data:; style-src 'self' 'unsafe-inline'; font-src 'self'; base-uri 'self'; object-src 'none'; form-action 'self' https://formspree.io https://api.web3forms.com; upgrade-insecure-requests" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <title>Book a Pentest Scoping Call or Request a Quote | Forethreat Security</title>
+  <meta name="description" content="Tell us what needs testing and when. Get a 30-minute scoping call with the tester and a written fixed-fee penetration testing proposal, usually within 2 business days." />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://forethreatsec.com/contact.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Forethreat Security" />
+  <meta property="og:title" content="Book a Pentest Scoping Call or Request a Quote | Forethreat Security" />
+  <meta property="og:description" content="Tell us what needs testing and when. Get a 30-minute scoping call with the tester and a written fixed-fee penetration testing proposal, usually within 2 business days." />
+  <meta property="og:url" content="https://forethreatsec.com/contact.html" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="theme-color" content="#070A12" />
+  <link rel="icon" href="/assets/logo.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="/style.css" />
+  <script src="/assets/site.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="/"><img src="/assets/logo.svg" alt="" width="30" height="30" /><span>Forethreat Security</span></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+    <nav class="nav-links" id="nav-links" aria-label="Main">
+      <a href="/web-application-penetration-testing.html">Web Apps</a>
+      <a href="/api-penetration-testing.html">APIs</a>
+      <a href="/network-penetration-testing.html">Network &amp; AD</a>
+      <a href="/pricing.html">Pricing</a>
+      <a href="/partners.html">For MSPs</a>
+      <a href="/about.html">About</a>
+      <a class="nav-cta" href="/contact.html" data-track="CTA: Nav Scoping Call">Book a scoping call</a>
+    </nav>
+  </div>
+</div>
+<header class="hero simple" style="padding-bottom:10px;">
+  <div class="wrap">
+    <div class="eyebrow"><div class="line"></div><div>Scoping call · Quote request · Partner inquiry</div></div>
+    <h1>Tell us what needs testing. <span>We'll reply within one business day.</span></h1>
+    <p class="sub">Answer a few questions so the call can focus on scope instead of basics. Don't include credentials, IP lists, or vulnerability details here.
+      We'll collect those securely after an NDA if needed.</p>
+  </div>
+</header>
+
+<main id="main">
+<section>
+  <div class="wrap contact">
+    <div class="contact-box" style="padding:26px;">
+      <form id="lead-form" class="form" novalidate>
+        <div class="row">
+          <div><label for="f-name">Your name</label><input id="f-name" name="name" type="text" autocomplete="name" required maxlength="100" /></div>
+          <div><label for="f-email">Work email</label><input id="f-email" name="email" type="email" autocomplete="email" required maxlength="150" /></div>
+        </div>
+        <div class="row">
+          <div><label for="f-company">Company</label><input id="f-company" name="company" type="text" autocomplete="organization" required maxlength="120" /></div>
+          <div><label for="f-role">Your role <span class="hint">(optional)</span></label><input id="f-role" name="role" type="text" autocomplete="organization-title" maxlength="100" placeholder="e.g., CTO, IT Director" /></div>
+        </div>
+        <fieldset>
+          <legend>What needs testing? <span class="hint">(choose any)</span></legend>
+          <div class="checks-grid">
+            <label><input type="checkbox" name="services" value="web" /> Web application</label>
+            <label><input type="checkbox" name="services" value="api" /> API (REST/GraphQL)</label>
+            <label><input type="checkbox" name="services" value="external" /> External network</label>
+            <label><input type="checkbox" name="services" value="internal" /> Internal network / AD</label>
+            <label><input type="checkbox" name="services" value="retainer" /> Ongoing / continuous testing</label>
+            <label><input type="checkbox" name="services" value="unsure" /> Not sure yet</label>
+          </div>
+        </fieldset>
+        <div class="row">
+          <div><label for="f-driver">What's driving this?</label>
+            <select id="f-driver" name="driver" required>
+              <option value="">Choose one</option>
+              <option>Customer / vendor security review</option>
+              <option>SOC 2 or ISO 27001</option>
+              <option>PCI DSS, FTC Safeguards, or other regulation</option>
+              <option>Cyber-insurance requirement</option>
+              <option>Product launch or major change</option>
+              <option>Proactive / periodic testing</option>
+              <option value="partner">I'm an MSP / agency asking for a client</option>
+              <option>Other</option>
+            </select></div>
+          <div><label for="f-timeline">When do you need the report?</label>
+            <select id="f-timeline" name="timeline" required>
+              <option value="">Choose one</option>
+              <option>Within 30 days</option>
+              <option>1–3 months</option>
+              <option>3–6 months</option>
+              <option>Just researching</option>
+            </select></div>
+        </div>
+        <div><label for="f-size">Rough size <span class="hint">(optional: roles, endpoints, live IPs, or hosts)</span></label>
+          <input id="f-size" name="size" type="text" maxlength="200" placeholder="e.g., 1 SaaS app, 3 roles, ~60 API endpoints" /></div>
+        <div><label for="f-msg">Anything else? <span class="hint">(optional, no sensitive details)</span></label>
+          <textarea id="f-msg" name="message" maxlength="2000" placeholder="Deadline, who's asking for the report, preferred call times…"></textarea></div>
+        <div class="hp" aria-hidden="true"><label for="f-gotcha">Leave this field empty</label><input id="f-gotcha" name="_gotcha" type="text" tabindex="-1" autocomplete="off" /></div>
+        <button class="btn signal" type="submit">Send scoping request</button>
+        <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+        <p class="fineprint">We use your details only to respond to this request. See our <a class="accent" href="legal.html#privacy">privacy notice</a>. Submitting this form doesn't authorize any testing.</p>
+      </form>
+      <div id="form-done" hidden>
+        <h2 style="margin:0 0 8px;">Thanks, your request is in.</h2>
+        <p>You'll hear back within one business day with available call times or a few scoping questions. If your deadline is very close, say so in a reply to that email.</p>
+      </div>
+    </div>
+    <div class="contact-box" style="padding:26px;">
+      <h3 style="margin:0 0 6px;">What happens next</h3>
+      <ol class="call-steps">
+        <li><span><b>Reply within one business day</b> with call times or scoping questions.</span></li>
+        <li><span><b>30-minute scoping call</b> with the tester. NDA first if you need one.</span></li>
+        <li><span><b>Written fixed-fee proposal,</b> usually within 2 business days.</span></li>
+        <li><span><b>Agreement, authorization, deposit,</b> then testing on agreed dates.</span></li>
+      </ol>
+      <a class="btn primary" style="margin-top:18px;justify-content:center;width:100%;" data-schedule hidden data-track="CTA: Schedule Direct">Prefer to pick a time? Book directly ↗</a>
+      <h3 style="margin:24px 0 6px;">Other ways to reach us</h3>
+      <p><a class="accent" href="mailto:belizaire@forethreatsec.com">belizaire@forethreatsec.com</a></p>
+      <p><a class="accent" href="https://www.linkedin.com/in/belizaireb" target="_blank" rel="noopener">LinkedIn ↗</a></p>
+      <p style="margin-top:14px;font-size:.85rem;">All testing is performed only under a signed agreement and written authorization to test.</p>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-cols">
+    <div>
+      <div style="display:flex; align-items:center; gap:10px; margin-bottom:10px;">
+        <img src="/assets/logo.svg" alt="" width="28" height="28" />
+        <div style="font-weight:700;color:rgba(255,255,255,.9);">Forethreat Security</div>
+      </div>
+      <div style="font-size:.9rem; max-width:34ch;">Founder-led penetration testing for web applications, APIs, networks, and Active Directory.</div>
+    </div>
+    <div>
+      <h4>Testing</h4>
+      <a href="/web-application-penetration-testing.html">Web application testing</a>
+      <a href="/api-penetration-testing.html">API testing</a>
+      <a href="/network-penetration-testing.html">Network &amp; AD testing</a>
+      <a href="/pricing.html#retainers">Continuous testing</a>
+    </div>
+    <div>
+      <h4>Company</h4>
+      <a href="/about.html">About</a>
+      <a href="/sample-report.html">Sample report</a>
+      <a href="/partners.html">MSP &amp; partner program</a>
+      <a href="/training.html">Training &amp; mentorship</a>
+      <a href="/legal.html">Legal &amp; privacy</a>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <a href="/contact.html">Book a scoping call</a>
+      <a href="mailto:belizaire@forethreatsec.com">belizaire@forethreatsec.com</a>
+      <a href="https://www.linkedin.com/in/belizaireb" target="_blank" rel="noopener">LinkedIn ↗</a>
+    </div>
+  </div>
+  <div class="wrap foot-bottom">
+    <span>© <span id="yr">2026</span> Forethreat Security LLC, a Florida limited liability company.</span>
+    <span>Testing performed only under written authorization.</span>
+  </div>
+</footer>
+</body>
+</html>

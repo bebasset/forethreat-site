@@ -3,310 +3,247 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Forethreat Security — offensive security firm delivering penetration testing, PTaaS, and security training. Certified practitioners testing web apps, APIs, networks, and Active Directory." />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://plausible.io https://static.cloudflareinsights.com; connect-src 'self' https://formspree.io https://api.web3forms.com https://plausible.io https://cloudflareinsights.com; img-src 'self' data:; style-src 'self' 'unsafe-inline'; font-src 'self'; base-uri 'self'; object-src 'none'; form-action 'self' https://formspree.io https://api.web3forms.com; upgrade-insecure-requests" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <title>Penetration Testing for SaaS & Growing Businesses | Forethreat Security</title>
+  <meta name="description" content="Independent, hands-on penetration testing for web applications, APIs, external networks, and Active Directory. Founder-led by a BSCP-certified tester. Fixed-fee proposals after a 30-minute scoping call." />
   <meta name="robots" content="index,follow" />
-  <meta property="og:title" content="Forethreat Security — Offensive Security & PTaaS" />
-  <meta property="og:description" content="Penetration testing, PTaaS, and security training from certified offensive security professionals. Understand threats before they strike." />
+  <link rel="canonical" href="https://forethreatsec.com/" />
   <meta property="og:type" content="website" />
-  <title>Forethreat Security — Offensive Security & PTaaS</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="style.css" />
+  <meta property="og:site_name" content="Forethreat Security" />
+  <meta property="og:title" content="Penetration Testing for SaaS & Growing Businesses | Forethreat Security" />
+  <meta property="og:description" content="Independent, hands-on penetration testing for web applications, APIs, external networks, and Active Directory. Founder-led by a BSCP-certified tester. Fixed-fee proposals after a 30-minute scoping call." />
+  <meta property="og:url" content="https://forethreatsec.com/" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="theme-color" content="#070A12" />
+  <link rel="icon" href="/assets/logo.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="/style.css" />
+  <script src="/assets/site.js" defer></script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "ProfessionalService", "@id": "https://forethreatsec.com/#org", "name": "Forethreat Security LLC", "url": "https://forethreatsec.com/", "logo": "https://forethreatsec.com/assets/logo.svg", "email": "belizaire@forethreatsec.com", "areaServed": "US", "description": "Founder-led penetration testing for web applications, APIs, external networks, and Active Directory.", "founder": {"@type": "Person", "name": "Belizaire Bassette II", "jobTitle": "Founder & Lead Penetration Tester", "sameAs": ["https://www.linkedin.com/in/belizaireb", "https://bebasset.github.io/"]}, "sameAs": ["https://www.linkedin.com/in/belizaireb"]}</script>
 </head>
 <body>
-  <!-- NAV -->
-  <div class="nav">
-    <div class="wrap nav-inner">
-      <a class="brand" href="index.html">
-        <img src="assets/logo.svg" alt="Forethreat" />
-        <span>Forethreat Security</span>
-      </a>
-      <div class="nav-links">
-        <a href="#services">Services</a>
-        <a href="#process">Process</a>
-        <a href="pricing.html">Pricing</a>
-        <a href="training.html">Training</a>
-        <a href="about.html">About</a>
-        <a class="nav-cta" href="#contact">Book a call →</a>
-      </div>
+<a class="skip" href="#main">Skip to content</a>
+<div class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="/"><img src="/assets/logo.svg" alt="" width="30" height="30" /><span>Forethreat Security</span></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+    <nav class="nav-links" id="nav-links" aria-label="Main">
+      <a href="/web-application-penetration-testing.html">Web Apps</a>
+      <a href="/api-penetration-testing.html">APIs</a>
+      <a href="/network-penetration-testing.html">Network &amp; AD</a>
+      <a href="/pricing.html">Pricing</a>
+      <a href="/partners.html">For MSPs</a>
+      <a href="/about.html">About</a>
+      <a class="nav-cta" href="/contact.html" data-track="CTA: Nav Scoping Call">Book a scoping call</a>
+    </nav>
+  </div>
+</div>
+<header class="hero simple">
+  <div class="wrap">
+    <div class="eyebrow"><div class="line"></div><div>Independent penetration testing · Web apps · APIs · Networks · Active Directory</div></div>
+    <h1>Penetration testing your customers, auditors, <span>and engineers can rely on.</span></h1>
+    <p class="sub">
+      Forethreat tests your web application, API, or network by hand, the way a real attacker would. You get a report that holds up in
+      enterprise security reviews and audits, and a prioritized fix list your engineers can act on. The certified tester who scopes your
+      engagement is the person who performs it.
+    </p>
+    <div class="cta">
+      <a class="btn signal" href="contact.html" data-track="CTA: Hero Scoping Call">Book a scoping call →</a>
+      <a class="btn" href="contact.html?type=quote" data-track="CTA: Hero Quote">Request a pentest quote</a>
+    </div>
+    <p class="assure"><b>30-minute call · written fixed-fee proposal, usually within 2 business days · no testing before signed authorization.</b></p>
+
+    <div class="trustbar">
+      <div class="trust"><b>Manual, authenticated testing</b><span>Access control, business logic, and multi-tenant isolation, not just scanner output</span></div>
+      <div class="trust"><b>Audit- and buyer-ready report</b><span>Executive summary, CVSS-rated findings, reproduction steps, retest results</span></div>
+      <div class="trust"><b>BSCP · eJPT certified</b><span>Founder-led delivery. <a class="accent" href="about.html">Verify the credentials →</a></span></div>
     </div>
   </div>
+</header>
 
-  <!-- HERO -->
-  <header class="hero simple">
-    <div class="wrap">
-      <div class="eyebrow">
-        <div class="line"></div>
-        <div>Offensive Security · Penetration Testing · PTaaS</div>
+<main id="main">
+<!-- WHO WE HELP -->
+<section class="roomy">
+  <div class="wrap">
+    <div class="section-head"><div>
+      <div class="kicker"><span class="num">01</span>When teams call us</div>
+      <h2>Most pentests start with a deadline. We scope to yours.</h2>
+      <p class="lead" style="margin-top:8px;">If one of these applies to you, a 30-minute scoping call will tell you exactly what to test, what it costs, and when it can be done.</p>
+    </div></div>
+    <div class="triggers">
+      <div class="trigger"><h3>An enterprise customer asked for a pentest report</h3><p>Security questionnaires and vendor reviews often ask for a recent independent test of your application and API. We scope the test to what the reviewer needs to see.</p></div>
+      <div class="trigger"><h3>You're preparing for SOC 2 or ISO 27001</h3><p>SOC 2 doesn't strictly mandate a pentest, but auditors commonly expect one as evidence of security testing. You get a report and attestation letter suitable for your auditor.</p></div>
+      <div class="trigger"><h3>You're launching or shipping a major change</h3><p>New auth, a public API, multi-tenancy, payments, or a re-platform. Test it before attackers and customers find the gaps.</p></div>
+      <div class="trigger"><h3>You run IT for other businesses</h3><p>MSPs and IT providers use us as an independent tester for their clients' external, internal, and Active Directory tests. <a class="accent" href="partners.html">Partner program →</a></p></div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="roomy">
+  <div class="wrap">
+    <div class="section-head"><div>
+      <div class="kicker"><span class="num">02</span>Services</div>
+      <h2>Three focused testing services, priced by scope.</h2>
+      <p class="lead" style="margin-top:8px;">Every test includes manual validation, a full report, a live readout, and one retest of fixed findings.</p>
+    </div></div>
+    <div class="grid3">
+      <div class="practice">
+        <h3>Web Application Penetration Testing</h3>
+        <p>Authenticated testing of your app's access control, authentication, sessions, and business logic.</p>
+        <ul><li>Role and tenant isolation (IDOR/BOLA)</li><li>Auth, MFA, SSO, and password reset flows</li><li>Injection, XSS, SSRF, file upload</li></ul>
+        <p style="color:#fff;font-weight:700;margin:0 0 12px;">From $4,500</p>
+        <a class="more" href="web-application-penetration-testing.html">Web app testing →</a>
       </div>
-      <h1>Understand threats <span>before they strike.</span></h1>
-      <p class="sub">
-        Forethreat Security is an offensive security firm. Our certified testers attack your web apps, APIs,
-        networks, and Active Directory the way real adversaries do. Then we show your team exactly how a breach
-        would happen and how to stop it.
+      <div class="practice">
+        <h3>API Penetration Testing</h3>
+        <p>REST and GraphQL APIs tested for the authorization flaws that scanners can't see.</p>
+        <ul><li>Object- and function-level authorization</li><li>JWT/OAuth handling and mass assignment</li><li>Rate limits and excessive data exposure</li></ul>
+        <p style="color:#fff;font-weight:700;margin:0 0 12px;">From $4,000</p>
+        <a class="more" href="api-penetration-testing.html">API testing →</a>
+      </div>
+      <div class="practice">
+        <h3>Network &amp; Active Directory Testing</h3>
+        <p>External perimeter tests and assumed-breach internal tests that map the path to domain admin.</p>
+        <ul><li>Internet-facing services, VPN, remote access</li><li>Kerberos, ADCS, credential, and delegation abuse</li><li>Lateral movement and segmentation checks</li></ul>
+        <p style="color:#fff;font-weight:700;margin:0 0 12px;">External from $3,500 · Internal/AD from $6,500</p>
+        <a class="more" href="network-penetration-testing.html">Network &amp; AD testing →</a>
+      </div>
+    </div>
+    <div class="micro" style="margin-top:14px;">Testing more than once a year? <a class="accent" href="pricing.html#retainers">Continuous testing plans</a> give you a fixed number of tester-days every quarter for new releases and retests.</div>
+  </div>
+</section>
+
+<!-- DELIVERABLES -->
+<section id="deliverables" class="roomy">
+  <div class="wrap">
+    <div class="section-head"><div>
+      <div class="kicker"><span class="num">03</span>What you receive</div>
+      <h2>A report built for two audiences.</h2>
+      <p class="lead" style="margin-top:8px;">Leadership and customers see what was tested and how it turned out. Engineers get the exact steps to reproduce each issue and how to fix it.</p>
+    </div></div>
+    <div class="includes">
+      <div class="inc"><h3>Executive summary</h3><p>Scope, overall risk, and the issues that matter most, in plain language.</p></div>
+      <div class="inc"><h3>Validated findings only</h3><p>Every issue is confirmed by hand with evidence. No unverified scanner output.</p></div>
+      <div class="inc"><h3>Reproduction steps</h3><p>Requests, responses, and screenshots, so your engineers can reproduce each issue.</p></div>
+      <div class="inc"><h3>Attack-path narrative</h3><p>How individual weaknesses chain together into real business impact.</p></div>
+      <div class="inc"><h3>Prioritized remediation</h3><p>Specific fixes, ranked by CVSS severity and how easily each issue can be exploited.</p></div>
+      <div class="inc"><h3>Retest &amp; status update</h3><p>We verify your fixes and issue an updated report showing what was resolved.</p></div>
+    </div>
+    <div class="cta" style="margin-top:18px;">
+      <a class="btn primary" href="sample-report.html" data-track="CTA: Sample Report">See a sample report →</a>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process" class="roomy">
+  <div class="wrap">
+    <div class="section-head"><div>
+      <div class="kicker"><span class="num">04</span>How an engagement works</div>
+      <h2>From first call to verified fixes.</h2>
+    </div></div>
+    <div class="steps4 steps5">
+      <div class="step4"><h3>Scoping call</h3><p>We confirm what you need tested, why, and by when. No obligation.</p><span class="when">30 minutes</span></div>
+      <div class="step4"><h3>Fixed-fee proposal</h3><p>Written scope, timeline, deliverables, and price. Mutual NDA available.</p><span class="when">Usually within 2 business days</span></div>
+      <div class="step4"><h3>Authorization</h3><p>Signed agreement, rules of engagement, and written authorization to test, then a deposit.</p><span class="when">Before any testing</span></div>
+      <div class="step4"><h3>Testing &amp; report</h3><p>Hands-on testing. Critical issues are reported immediately, not held for the report.</p><span class="when">Typically 3–8 testing days</span></div>
+      <div class="step4"><h3>Readout &amp; retest</h3><p>A walkthrough with your team, then verification of your fixes.</p><span class="when">Retest included</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST -->
+<section id="trust" class="roomy">
+  <div class="wrap split">
+    <div>
+      <div class="kicker"><span class="num">05</span>Why work with Forethreat</div>
+      <h2>A new firm, with credentials you can verify.</h2>
+      <p class="lead" style="margin-top:12px;">
+        Forethreat Security was founded in 2026, and we won't pad that with invented logos or testimonials. Instead, you can check
+        everything that matters: the tester's certifications, how we test, and what the report looks like. You also work directly with
+        the person doing the testing. Nobody hands your engagement to a junior team after the sale.
       </p>
-      <div class="cta">
-        <a class="btn signal" href="#contact">Book a call →</a>
-        <a class="btn" href="#services">See our services</a>
-      </div>
-
-      <div class="trustbar">
-        <div class="trust"><b>Full-scope testing</b><span>Web, API, network &amp; Active Directory</span></div>
-        <div class="trust"><b>OWASP &amp; NIST aligned</b><span>Recognized methodology, CVSS-rated findings</span></div>
-        <div class="trust"><b>BSCP · eJPT certified</b><span>Credentialed, hands-on practitioners</span></div>
-      </div>
+      <ul class="tick" style="margin-top:16px;color:rgba(255,255,255,.86);line-height:1.9;">
+        <li>Burp Suite Certified Practitioner (BSCP) and eJPT certified founder</li>
+        <li>Professional penetration-testing experience across web, API, and network assessments</li>
+        <li>Methodology based on OWASP WSTG, OWASP API Security Top 10, and MITRE ATT&amp;CK</li>
+        <li>Written authorization and rules of engagement before every test</li>
+      </ul>
+      <div class="cta" style="margin-top:18px;"><a class="btn" href="about.html">About the founder →</a><a class="btn" href="sample-report.html">Sample report →</a></div>
     </div>
-  </header>
-
-  <!-- FRAMEWORK STRIP -->
-  <div class="strip" aria-label="Methodologies and certifications">
-    <div class="wrap strip-inner">
-      <span class="strip-label">Methodologies &amp; credentials</span>
-      <span class="strip-item">OWASP Top 10</span>
-      <span class="strip-item">OWASP WSTG</span>
-      <span class="strip-item">OWASP API Top 10</span>
-      <span class="strip-item">MITRE ATT&amp;CK</span>
-      <span class="strip-item">NIST CSF</span>
-      <span class="strip-item">CVSS</span>
-      <span class="strip-item">BSCP</span>
-      <span class="strip-item">eJPT</span>
+    <div class="facts">
+      <div class="fact"><small>Who you talk to</small><b>The tester, from scoping through retest</b></div>
+      <div class="fact"><small>What we test</small><b>Web apps · REST &amp; GraphQL APIs · External networks · Internal/AD</b></div>
+      <div class="fact"><small>How we price</small><b>Fixed fee per written scope. No hourly surprises.</b></div>
+      <div class="fact"><small>What we won't do</small><b>Guarantee findings, promise compliance, or test without authorization</b></div>
     </div>
   </div>
+</section>
 
-  <!-- 01 SERVICES -->
-  <section id="services" class="roomy">
-    <div class="wrap">
-      <div class="section-head">
-        <div>
-          <div class="kicker"><span class="num">01</span>What we do</div>
-          <h2>Three practices, one accountable team.</h2>
-          <p class="lead" style="margin-top:8px;">Whether you need one test, ongoing coverage, or a stronger team, you work directly with the people doing the work.</p>
-        </div>
-      </div>
-      <div class="grid3">
-        <div class="practice">
-          <div class="icon">🎯</div>
-          <h3>Penetration Testing</h3>
-          <p>Fixed-scope, fixed-price assessments.</p>
-          <ul>
-            <li>Web application testing</li>
-            <li>API testing (REST &amp; GraphQL)</li>
-            <li>External &amp; internal network</li>
-            <li>Active Directory</li>
-          </ul>
-          <a class="more" href="pricing.html">View packages →</a>
-        </div>
-        <div class="practice">
-          <div class="icon">🛡️</div>
-          <h3>PTaaS &amp; Retainers</h3>
-          <p>Continuous testing as your environment changes.</p>
-          <ul>
-            <li>Scheduled, rotating coverage</li>
-            <li>Testing of new features &amp; releases</li>
-            <li>Retesting of fixes included</li>
-            <li>Direct access to your testers</li>
-          </ul>
-          <a class="more" href="pricing.html">View retainers →</a>
-        </div>
-        <div class="practice">
-          <div class="icon">🎓</div>
-          <h3>Training &amp; Education</h3>
-          <p>Hands-on offensive security instruction.</p>
-          <ul>
-            <li>1-on-1 remote mentorship</li>
-            <li>1–4 week bootcamps</li>
-            <li>Certification prep (eJPT, BSCP, OSCP)</li>
-            <li>Capstone engagement &amp; report</li>
-          </ul>
-          <a class="more" href="training.html">Explore training →</a>
-        </div>
-      </div>
+<!-- FAQ -->
+<section id="faq" class="roomy">
+  <div class="wrap">
+    <div class="section-head"><div><div class="kicker">FAQ</div><h2>Questions buyers ask before booking</h2></div></div>
+    <div class="faq">
+      <details><summary>How much does a penetration test cost?</summary><p>It depends on scope. Web application tests start at $4,500, API tests at $4,000, external network tests at $3,500, and internal/Active Directory tests at $6,500. You get a fixed price in writing after the scoping call. <a class="accent" href="pricing.html">See pricing</a>.</p></details>
+      <details><summary>Will the report satisfy our SOC 2 auditor or customer?</summary><p>Our reports are built for that use: scope, methodology, dates, findings, and retest status, plus an attestation letter on request. Whether a specific auditor or customer accepts a report is their decision, so tell us their requirements during scoping and we'll design the test to match.</p></details>
+      <details><summary>Do you guarantee you'll find vulnerabilities?</summary><p>No, and you should be wary of anyone who does. You're paying for thorough, documented testing of the agreed scope. If we find nothing significant, the report shows exactly what was tested and how.</p></details>
+      <details><summary>Do you just run automated scanners?</summary><p>No. Tools help with coverage, but the findings that matter, like broken access control, tenant isolation failures, and business logic flaws, require manual testing. Every reported issue is validated by hand.</p></details>
+      <details><summary>How soon can you start?</summary><p>Usually 2–4 weeks after the agreement is signed, depending on the schedule. Tell us your deadline on the scoping call and we'll say up front whether we can meet it.</p></details>
+      <details><summary>Will testing break production?</summary><p>We agree on testing windows, rate limits, and off-limits actions in the rules of engagement, and we can test a staging environment if you have one. Destructive actions are never performed without explicit approval.</p></details>
+      <details><summary>Do you sign NDAs?</summary><p>Yes. A mutual NDA is available before the scoping call if you need one, and confidentiality is part of every engagement agreement.</p></details>
+      <details><summary>How do payment and retesting work?</summary><p>A 50% deposit confirms your testing dates, and the balance is due when the report is delivered. You can pay by ACH, card, or PayPal. One retest of fixed findings within 60 days of the report is included.</p></details>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- FREE BASELINE FEATURE -->
-  <section id="baseline" style="padding-top:0;">
-    <div class="wrap">
-      <div class="banner">
-        <div>
-          <div class="kicker" style="color:var(--signal);">Complimentary · New clients</div>
-          <h2>Free Security Baseline Assessment</h2>
-          <p>See the quality of our work before you commit to anything.</p>
-          <ul class="checks">
-            <li>One asset: your web application <em>or</em> external network</li>
-            <li>3–5 real, evidence-backed vulnerabilities</li>
-            <li>Executive risk summary + 30-minute readout</li>
-          </ul>
-          <div class="fine">A focused, limited assessment, not a full penetration test. Written authorization required. Founding clients receive 15–20% off their first paid engagement.</div>
-        </div>
-        <div class="cta">
-          <a class="btn signal" href="#contact">Request your baseline →</a>
-          <a class="btn" href="business-security-guide.pdf" target="_blank" rel="noopener" download>📄 Free Business Security Guide</a>
-        </div>
-      </div>
+<section>
+  <div class="wrap">
+    <div class="ctaband">
+      <div><h2>Need a pentest report by a specific date?</h2><p>Tell us what needs testing and when. You'll get a clear scope and fixed price, and a straight answer about whether we can meet your timeline.</p></div>
+      <div class="cta"><a class="btn signal" href="contact.html" data-track="CTA: Footer Band Scoping Call">Book a scoping call →</a></div>
     </div>
-  </section>
+    <p class="fineprint" style="margin-top:18px;text-align:center;">Learning offensive security yourself? Forethreat also offers <a class="accent" href="training.html">1-on-1 mentorship and bootcamps</a>.</p>
+  </div>
+</section>
+</main>
 
-  <!-- 02 PROCESS -->
-  <section id="process" class="roomy">
-    <div class="wrap">
-      <div class="section-head">
-        <div>
-          <div class="kicker"><span class="num">02</span>How we work</div>
-          <h2>A clear path from first call to final report.</h2>
-        </div>
+<footer class="foot">
+  <div class="wrap foot-cols">
+    <div>
+      <div style="display:flex; align-items:center; gap:10px; margin-bottom:10px;">
+        <img src="/assets/logo.svg" alt="" width="28" height="28" />
+        <div style="font-weight:700;color:rgba(255,255,255,.9);">Forethreat Security</div>
       </div>
-      <div class="steps4 steps5">
-        <div class="step4"><h3>Discovery &amp; scoping</h3><p>We learn your environment and goals, then send a fixed quote.</p><span class="when">30-minute call</span></div>
-        <div class="step4"><h3>Rules of engagement</h3><p>Scope, timing, and contacts in writing, plus a signed authorization to test.</p><span class="when">Before any testing</span></div>
-        <div class="step4"><h3>Active testing</h3><p>Manual, hands-on testing. Critical issues are reported to you right away.</p><span class="when">Typically 3–8 days</span></div>
-        <div class="step4"><h3>Reporting</h3><p>An executive summary for leadership and step-by-step findings for engineers.</p><span class="when">Report + readout</span></div>
-        <div class="step4"><h3>Remediation &amp; retest</h3><p>We help your team fix issues, then verify that the fixes worked.</p><span class="when">Retest included</span></div>
-      </div>
+      <div style="font-size:.9rem; max-width:34ch;">Founder-led penetration testing for web applications, APIs, networks, and Active Directory.</div>
     </div>
-  </section>
-
-  <!-- 03 WHAT YOU GET -->
-  <section id="why" class="roomy">
-    <div class="wrap">
-      <div class="section-head">
-        <div>
-          <div class="kicker"><span class="num">03</span>Every engagement includes</div>
-          <h2>Real findings, not scanner noise.</h2>
-        </div>
-      </div>
-      <div class="includes">
-        <div class="inc"><h3>Manual validation</h3><p>Every finding is confirmed by hand. No false positives padding the report.</p></div>
-        <div class="inc"><h3>Proof of concept</h3><p>Reproduction steps and evidence your engineers can follow.</p></div>
-        <div class="inc"><h3>Attack-path analysis</h3><p>How individual issues chain together into a real breach.</p></div>
-        <div class="inc"><h3>Business-impact ratings</h3><p>CVSS severity explained in terms leadership understands.</p></div>
-        <div class="inc"><h3>Prioritized remediation</h3><p>Clear, practical fixes ranked by risk.</p></div>
-        <div class="inc"><h3>NDA &amp; confidentiality</h3><p>A mutual NDA is standard, and your data stays confidential.</p></div>
-      </div>
+    <div>
+      <h4>Testing</h4>
+      <a href="/web-application-penetration-testing.html">Web application testing</a>
+      <a href="/api-penetration-testing.html">API testing</a>
+      <a href="/network-penetration-testing.html">Network &amp; AD testing</a>
+      <a href="/pricing.html#retainers">Continuous testing</a>
     </div>
-  </section>
-
-  <!-- TESTIMONIALS -->
-  <!--
-    To add a real testimonial: have the client complete docs/14_Client-Testimonial-and-Release-Form.
-    Per that release, publish ONLY the company name (or industry) + job title — never an individual's
-    personal name, and never any vulnerability or technical finding. Copy a .quote block below and edit it.
-    For an "industry only" attribution, put the role in .role and an industry descriptor in .org.
-  -->
-  <!-- Testimonials hidden until real, signed testimonials exist. Placeholder quotes removed
-       2026-07-23 to avoid publishing fabricated "verified" client feedback. Add cards ONLY from
-       signed release forms (docs/14_Client-Testimonial-and-Release-Form), then remove hidden/display:none. -->
-  <section id="testimonials" hidden style="display:none">
-    <div class="wrap">
-      <div class="section-head"><div><h2>What clients say</h2><p class="lead">Verified feedback from organizations we've worked with — published with permission, with company and findings kept confidential.</p></div></div>
-      <div class="quotes">
-        <!-- Real testimonial cards go here — one per signed release form. -->
-      </div>
-      <div class="micro" style="margin-top:14px;">
-        Testimonials are published only with written client permission and are kept confidential by design — <strong>no company is named without consent, no individual's personal name is published, and no vulnerability or finding is ever disclosed.</strong> Worked with us? <a href="#contact" class="accent">Share your experience</a>.
-      </div>
+    <div>
+      <h4>Company</h4>
+      <a href="/about.html">About</a>
+      <a href="/sample-report.html">Sample report</a>
+      <a href="/partners.html">MSP &amp; partner program</a>
+      <a href="/training.html">Training &amp; mentorship</a>
+      <a href="/legal.html">Legal &amp; privacy</a>
     </div>
-  </section>
-
-  <!-- 04 ABOUT -->
-  <section id="about" class="roomy">
-    <div class="wrap split">
-      <div>
-        <div class="kicker"><span class="num">04</span>About Forethreat</div>
-        <h2>Certified practitioners. No hand-offs.</h2>
-        <p class="lead" style="margin-top:12px;">
-          Forethreat Security was built by penetration testers who were tired of reports full of scanner output and little guidance.
-          We test by hand, explain what we find in plain language, and stay with you through remediation.
-          The people who scope your engagement are the same people who test it.
-        </p>
-        <div class="cta" style="margin-top:18px;"><a class="btn" href="about.html">More about us →</a></div>
-      </div>
-      <div class="facts">
-        <div class="fact"><small>Focus</small><b>Small &amp; mid-sized businesses</b></div>
-        <div class="fact"><small>Credentials</small><b>BSCP · eJPT · OSCP in progress</b></div>
-        <div class="fact"><small>Approach</small><b>Authorized, manual, collaborative</b></div>
-      </div>
+    <div>
+      <h4>Contact</h4>
+      <a href="/contact.html">Book a scoping call</a>
+      <a href="mailto:belizaire@forethreatsec.com">belizaire@forethreatsec.com</a>
+      <a href="https://www.linkedin.com/in/belizaireb" target="_blank" rel="noopener">LinkedIn ↗</a>
     </div>
-  </section>
-
-  <!-- FAQ -->
-  <section id="faq" class="roomy">
-    <div class="wrap">
-      <div class="section-head"><div><div class="kicker">FAQ</div><h2>Common questions</h2></div></div>
-      <div class="faq">
-        <details><summary>Do you require authorization?</summary><p>Always. We only test with written authorization, an agreed scope, and signed rules of engagement.</p></details>
-        <details><summary>Will you sign an NDA?</summary><p>Yes. A mutual NDA is standard for every engagement.</p></details>
-        <details><summary>Do you just run automated scanners?</summary><p>No. Testing is manual and hands-on, so every finding is confirmed with real proof.</p></details>
-        <details><summary>Do you offer retesting?</summary><p>Yes. One retest is included with every one-off test, and retesting is built into retainers.</p></details>
-        <details><summary>How do I pay?</summary><p>Card, ACH, or PayPal. Installments and prepaid retainers are available. See <a href="pricing.html" class="accent">Pricing</a>.</p></details>
-        <details><summary>How long does a test take?</summary><p>Most engagements take 3–8 testing days, depending on scope. You'll get a timeline with your quote.</p></details>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact" class="roomy">
-    <div class="wrap">
-      <div class="contact">
-        <div class="contact-box" style="padding:28px;">
-          <div class="kicker">Get started</div>
-          <h2 style="margin:0 0 8px;">Start protecting what matters.</h2>
-          <p>Book a free 30-minute discovery call. You'll talk with a practitioner, not a salesperson.</p>
-          <ol class="call-steps">
-            <li><span><b>Tell us your context.</b> What you want tested, and why now.</span></li>
-            <li><span><b>Talk it through.</b> We'll ask a few questions about scope and access.</span></li>
-            <li><span><b>Get a written proposal.</b> A fixed scope, timeline, and price.</span></li>
-          </ol>
-        </div>
-        <div class="contact-box" style="padding:28px;">
-          <h3 style="margin:0 0 6px;">Reach our team</h3>
-          <p><a class="accent" href="mailto:belizaire@forethreatsec.com">belizaire@forethreatsec.com</a></p>
-          <p>Calls by Zoom or Google Meet.</p>
-          <div class="contact-actions" style="flex-direction:column; align-items:stretch;">
-            <a class="btn signal" style="justify-content:center;" href="mailto:belizaire@forethreatsec.com?subject=Forethreat%20-%20Discovery%20Call%20Request&body=Company%3A%0AAsset(s)%3A%0ATesting%20type%20(Web%2FNetwork%2FAPI%2FAD)%3A%0AAuth%20available%3F%20(Yes%2FNo)%3A%0ATimeframe%3A%0APreferred%20call%20times%3A%0A">Book a discovery call →</a>
-            <a class="btn" style="justify-content:center;" href="https://www.linkedin.com/in/belizaireb" target="_blank" rel="noopener">Message us on LinkedIn ↗</a>
-          </div>
-          <p style="margin-top:14px; font-size:.85rem; color:var(--muted2);">All testing is performed only under explicit written authorization.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="foot">
-    <div class="wrap foot-cols">
-      <div>
-        <div style="display:flex; align-items:center; gap:10px; margin-bottom:10px;">
-          <img src="assets/logo.svg" alt="" width="28" height="28" />
-          <div style="font-weight:700;color:rgba(255,255,255,.9);">Forethreat Security</div>
-        </div>
-        <div style="font-size:.9rem; max-width:34ch;">Understand threats before they strike. Authorized offensive security testing and training.</div>
-      </div>
-      <div>
-        <h4>Services</h4>
-        <a href="index.html#services">Penetration Testing</a>
-        <a href="pricing.html">PTaaS &amp; Retainers</a>
-        <a href="index.html#baseline">Free Baseline</a>
-        <a href="training.html">Training</a>
-      </div>
-      <div>
-        <h4>Company</h4>
-        <a href="about.html">About</a>
-        <a href="pricing.html">Pricing</a>
-        <a href="legal.html">Terms &amp; Legal</a>
-      </div>
-      <div>
-        <h4>Contact</h4>
-        <a href="mailto:belizaire@forethreatsec.com">Email us</a>
-        <a href="https://www.linkedin.com/in/belizaireb" target="_blank" rel="noopener">LinkedIn ↗</a>
-        <a href="index.html#contact">Book a call</a>
-      </div>
-    </div>
-    <div class="wrap foot-bottom">
-      <span>© <span id="yr">2026</span> Forethreat Security LLC. All rights reserved.</span>
-      <span>Authorized testing only · Evidence-driven reporting</span>
-    </div>
-  </footer>
-  <script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
+  </div>
+  <div class="wrap foot-bottom">
+    <span>© <span id="yr">2026</span> Forethreat Security LLC, a Florida limited liability company.</span>
+    <span>Testing performed only under written authorization.</span>
+  </div>
+</footer>
 </body>
 </html>

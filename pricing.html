@@ -3,241 +3,169 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Forethreat pricing — free baseline assessment, one-off penetration tests (Web, Network, API, Active Directory), monthly security retainers, and PTaaS. Flexible payment plans via Stripe and PayPal." />
-  <title>Pricing — Forethreat</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="style.css" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://plausible.io https://static.cloudflareinsights.com; connect-src 'self' https://formspree.io https://api.web3forms.com https://plausible.io https://cloudflareinsights.com; img-src 'self' data:; style-src 'self' 'unsafe-inline'; font-src 'self'; base-uri 'self'; object-src 'none'; form-action 'self' https://formspree.io https://api.web3forms.com; upgrade-insecure-requests" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <title>Penetration Testing Pricing | Forethreat Security</title>
+  <meta name="description" content="Transparent starting prices for web application, API, external network, and Active Directory penetration tests, plus capacity-defined continuous testing plans. Fixed fee per written scope." />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://forethreatsec.com/pricing.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Forethreat Security" />
+  <meta property="og:title" content="Penetration Testing Pricing | Forethreat Security" />
+  <meta property="og:description" content="Transparent starting prices for web application, API, external network, and Active Directory penetration tests, plus capacity-defined continuous testing plans. Fixed fee per written scope." />
+  <meta property="og:url" content="https://forethreatsec.com/pricing.html" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="theme-color" content="#070A12" />
+  <link rel="icon" href="/assets/logo.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="/style.css" />
+  <script src="/assets/site.js" defer></script>
 </head>
 <body>
-  <div class="nav">
-    <div class="wrap nav-inner">
-      <a class="brand" href="index.html"><img src="assets/logo.svg" alt="Forethreat" /><span>Forethreat Security</span></a>
-      <div class="nav-links">
-        <a href="index.html#services">Services</a>
-        <a href="index.html#process">Process</a>
-        <a href="pricing.html" class="active">Pricing</a>
-        <a href="training.html">Training</a>
-        <a href="about.html">About</a>
-        <a class="nav-cta" href="index.html#contact">Book a call →</a>
-      </div>
+<a class="skip" href="#main">Skip to content</a>
+<div class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="/"><img src="/assets/logo.svg" alt="" width="30" height="30" /><span>Forethreat Security</span></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+    <nav class="nav-links" id="nav-links" aria-label="Main">
+      <a href="/web-application-penetration-testing.html">Web Apps</a>
+      <a href="/api-penetration-testing.html">APIs</a>
+      <a href="/network-penetration-testing.html">Network &amp; AD</a>
+      <a href="/pricing.html" class="active" aria-current="page">Pricing</a>
+      <a href="/partners.html">For MSPs</a>
+      <a href="/about.html">About</a>
+      <a class="nav-cta" href="/contact.html" data-track="CTA: Nav Scoping Call">Book a scoping call</a>
+    </nav>
+  </div>
+</div>
+<header class="hero simple">
+  <div class="wrap">
+    <div class="eyebrow"><div class="line"></div><div>Pricing</div></div>
+    <h1>Starting prices, published. <span>Final price fixed in writing.</span></h1>
+    <p class="sub">Price follows testing effort, which depends on roles, endpoints, hosts, and complexity. Below are starting prices and the scope they cover.
+      After a 30-minute scoping call you get a fixed fee in writing. If the scope doesn't change, the price doesn't change.</p>
+    <div class="cta"><a class="btn signal" href="contact.html" data-track="CTA: Pricing Hero Scoping Call">Book a scoping call →</a></div>
+  </div>
+</header>
+
+<main id="main">
+<section class="roomy">
+  <div class="wrap">
+    <div class="section-head"><div><div class="kicker"><span class="num">01</span>One-time penetration tests</div><h2>Three depths per service</h2>
+      <p class="lead" style="margin-top:8px;"><b>Essential</b> covers a smaller, well-defined scope. <b>Professional</b> is the standard for production systems that customers or auditors will ask about. <b>Advanced</b> is custom-scoped.</p></div></div>
+    <div class="card"><div class="card-body" style="padding:6px 10px;overflow-x:auto;">
+      <table class="tbl">
+        <thead><tr><th>Service</th><th>Essential</th><th>Professional</th><th>Advanced</th><th></th></tr></thead>
+        <tbody>
+        <tr><td><b style="color:#fff;">Web application</b></td><td>from $4,500<br><small>1 app · 2 roles · ≈3 days</small></td><td>from $8,500<br><small>4 roles · tenant isolation · backing API · ≈6 days</small></td><td>custom<br><small>8+ days</small></td><td><a class="accent" href="web-application-penetration-testing.html">Details</a></td></tr>
+        <tr><td><b style="color:#fff;">API (REST/GraphQL)</b></td><td>from $4,000<br><small>≈30 endpoints · 2 roles · ≈3 days</small></td><td>from $7,500<br><small>≈100 endpoints or GraphQL · ≈5–6 days</small></td><td>custom<br><small>8+ days</small></td><td><a class="accent" href="api-penetration-testing.html">Details</a></td></tr>
+        <tr><td><b style="color:#fff;">External network</b></td><td>from $3,500<br><small>≤16 live hosts · ≈2–3 days</small></td><td>from $6,000<br><small>≤64 live hosts · ≈4–5 days</small></td><td>custom<br><small>65+ hosts</small></td><td><a class="accent" href="network-penetration-testing.html">Details</a></td></tr>
+        <tr><td><b style="color:#fff;">Internal / Active Directory</b></td><td>from $6,500<br><small>1 domain · ≈250 hosts · ≈4 days</small></td><td>from $10,500<br><small>≈1,000 hosts · segmentation · ≈7 days</small></td><td>custom<br><small>10+ days</small></td><td><a class="accent" href="network-penetration-testing.html">Details</a></td></tr>
+        </tbody>
+      </table>
+    </div></div>
+    <div class="cols2" style="margin-top:14px;">
+      <div class="box"><h3>Every test includes</h3><ul class="tick">
+        <li>Scoping call and written fixed-fee proposal</li>
+        <li>Manual testing by a certified tester (the founder)</li>
+        <li>Immediate notice of critical findings</li>
+        <li>Report: executive summary, CVSS-rated findings, reproduction steps, remediation</li>
+        <li>Live readout call with your team</li>
+        <li>1 retest of fixed findings within 60 days, with an updated report</li></ul></div>
+      <div class="box"><h3>Not included unless scoped</h3><ul class="cross">
+        <li>Additional retests (<b>$750</b> each)</li>
+        <li>Attestation letter on Essential tests (<b>$500</b>; included in Professional)</li>
+        <li>Rush scheduling (<b>+25%</b>, subject to availability)</li>
+        <li>Phishing, physical, denial-of-service, or red-team engagements</li>
+        <li>Remediation engineering. Advisory time is billed at the day rate (<b>$1,400/day</b>).</li></ul></div>
     </div>
   </div>
+</section>
 
-  <header class="hero">
-    <div class="wrap">
-      <div class="eyebrow"><div class="line"></div><div>Pricing · Authorized Testing Only</div></div>
-      <h1>Pricing built for <span>real security outcomes.</span></h1>
-      <p class="sub" style="max-width:70ch;">Start free, scale into a contract. Pay one-off or in monthly installments. Every engagement is scoped to your environment — the figures below are starting points; your final quote follows a short scoping call.</p>
+<section id="retainers" class="roomy">
+  <div class="wrap">
+    <div class="section-head"><div><div class="kicker"><span class="num">02</span>Continuous testing</div><h2>Retainers with defined capacity</h2>
+      <p class="lead" style="margin-top:8px;">For teams that ship often or need to show customers ongoing testing. Each plan buys a set number of <b>tester-days per quarter</b>, used for scheduled tests, new-feature testing, and retests.
+      You always know exactly what you're paying for. No "unlimited" promises.</p></div></div>
+    <div class="tiers">
+      <div class="tier"><h3>Essentials</h3><p class="for">One primary application, API, or perimeter</p>
+        <p class="amt">$1,500 <small>/ month</small></p><p class="effort">3 tester-days per quarter</p>
+        <ul><li>1 asset in scope</li><li>Quarterly test + report on that asset</li><li>Retests drawn from the same capacity</li><li>Email support, monthly check-in</li></ul>
+        <a class="btn" href="contact.html?service=retainer" data-track="CTA: Retainer Essentials">Discuss Essentials</a></div>
+      <div class="tier pop"><span class="badge">BEST FOR SAAS</span><h3>Professional</h3><p class="for">Growing product with frequent releases</p>
+        <p class="amt">$2,750 <small>/ month</small></p><p class="effort">6 tester-days per quarter</p>
+        <ul><li>Up to 3 assets (e.g., app, API, perimeter)</li><li>Release testing booked with 5 business days' notice</li><li>Retests drawn from the same capacity</li><li>Quarterly readout + annual attestation letter</li></ul>
+        <a class="btn primary" href="contact.html?service=retainer" data-track="CTA: Retainer Professional">Discuss Professional</a></div>
+      <div class="tier"><h3>Enterprise</h3><p class="for">Multiple products or environments</p>
+        <p class="amt">from $4,500 <small>/ month</small></p><p class="effort">10+ tester-days per quarter</p>
+        <ul><li>Custom asset list and cadence</li><li>Internal/AD testing in rotation</li><li>Priority scheduling within agreed windows</li><li>Quarterly executive reporting</li></ul>
+        <a class="btn" href="contact.html?service=retainer" data-track="CTA: Retainer Enterprise">Discuss Enterprise</a></div>
     </div>
-  </header>
+    <div class="micro" style="margin-top:14px;">
+      <b>Terms:</b> 12-month agreement, cancellable with 30 days' notice after the first 3 months. Unused tester-days roll over one quarter, then expire.
+      Extra days are billed at $1,400/day. Billed monthly by ACH or card. Retainers are limited in number so each client gets the founder's direct attention.
+    </div>
+  </div>
+</section>
 
-  <!-- FOUNDING CLIENT OFFER -->
-  <section style="padding-top:6px;">
-    <div class="wrap">
-      <div class="price pop" style="border-color:rgba(255,176,32,.5); background:linear-gradient(180deg, rgba(255,176,32,.10), rgba(255,255,255,.05));">
-        <span class="badge">FOUNDING CLIENTS</span>
-        <h3 style="margin-bottom:4px;">Founding Client Program — limited intro pricing</h3>
-        <p class="note" style="margin-bottom:10px;">We're onboarding a small number of founding clients. In exchange for a short testimonial or reference on completion, you get <strong style="color:#fff;">15–20% off</strong> your first engagement — same depth, same reporting, same quality.</p>
-        <ul style="margin-bottom:0;">
-          <li>Limited spots, so every engagement gets senior, hands-on attention</li>
-          <li>Lock in founding rates before standard pricing applies</li>
-          <li>Applies to any one-off test, retainer, or bootcamp below</li>
-        </ul>
-      </div>
+<section class="roomy">
+  <div class="wrap">
+    <div class="section-head"><div><div class="kicker"><span class="num">03</span>Payment</div><h2>How payment works</h2></div></div>
+    <div class="grid3">
+      <div class="svc"><h3>One-time tests</h3><p>A 50% deposit confirms your testing dates. The balance is due when the report is delivered (net 15). ACH is preferred for larger invoices.</p></div>
+      <div class="svc"><h3>Pay an invoice</h3><p>Card, ACH, Apple/Google Pay via Stripe, or PayPal.</p>
+        <div class="cta"><a class="btn primary" href="https://buy.stripe.com/eVq28r1ByadP1nb5EW2VG0t" target="_blank" rel="noopener">Pay by Stripe ↗</a><a class="btn" href="https://paypal.me/forethreatsec" target="_blank" rel="noopener">PayPal ↗</a></div></div>
+      <div class="svc"><h3>No discount games</h3><p>We don't inflate prices to offer discounts. Bundled scopes (e.g., web + API, or external + internal) are quoted as one engagement, so shared setup and reporting time is priced once.</p></div>
     </div>
-  </section>
+    <div class="micro" style="margin-top:14px;">Payments are only taken against a signed proposal or agreement. Deposits become non-refundable once testing begins. Full terms are in the engagement agreement (<a href="legal.html" class="accent">summary</a>).</div>
+  </div>
+</section>
 
-  <!-- FREE BASELINE -->
-  <section>
-    <div class="wrap">
-      <div class="section-head"><div><h2>1 · Free Security Baseline Assessment</h2><p class="lead">Your no-cost starting point. Experience the quality before you spend a dollar.</p></div></div>
-      <div class="price-row">
-        <div class="price pop" style="grid-column:1 / -1;">
-          <span class="badge">FREE · LIMITED</span>
-          <h3>Security Baseline Assessment</h3>
-          <p class="from">$0 <small>/ one asset</small></p>
-          <p class="note">Designed to uncover real risk and demonstrate exposure. Not a full penetration test.</p>
-          <ul>
-            <li>Testing of <strong>one</strong> asset — web application <em>or</em> external network</li>
-            <li>Identification of <strong>3–5 real, evidence-backed vulnerabilities</strong></li>
-            <li>Executive-level risk summary + high-level remediation guidance</li>
-            <li>30-minute readout call</li>
-          </ul>
-          <a class="btn signal" href="index.html#contact">Claim your free baseline ↗</a>
-        </div>
-      </div>
+<section>
+  <div class="wrap">
+    <div class="ctaband">
+      <div><h2>Not sure which tier fits?</h2><p>Tell us what's driving the test (a customer review, audit, launch, or regulation). We'll recommend the smallest scope that meets the requirement.</p></div>
+      <div class="cta"><a class="btn signal" href="contact.html" data-track="CTA: Pricing Band">Book a scoping call →</a></div>
     </div>
-  </section>
+    <p class="fineprint" style="margin-top:18px;text-align:center;">Looking for training or mentorship pricing? See <a class="accent" href="training.html">Training</a>.</p>
+  </div>
+</section>
+</main>
 
-  <!-- ONE-OFF PROJECTS -->
-  <section>
-    <div class="wrap">
-      <div class="section-head"><div><h2>2 · One-Off Penetration Tests (Project-Based)</h2><p class="lead">A fixed-scope, fixed-price engagement with a full professional report. Ideal for compliance, due diligence, pre-launch, or a point-in-time assessment.</p></div></div>
-      <div class="price-row">
-        <div class="price">
-          <h3>Web Application Test</h3>
-          <p class="from">from $4,500</p>
-          <p class="note">Per application · scoped by roles, dynamic pages &amp; functionality</p>
-          <ul><li>Full OWASP-aligned methodology</li><li>Auth, access control, business logic</li><li>Professional report + CVSS + attack paths</li><li>1 complimentary retest of fixed findings</li></ul>
-          <a class="btn primary" href="index.html#contact">Request a quote</a>
-        </div>
-        <div class="price">
-          <h3>API Penetration Test</h3>
-          <p class="from">from $4,000</p>
-          <p class="note">Per API · scoped by number of endpoints</p>
-          <ul><li>REST &amp; GraphQL</li><li>BOLA/IDOR, broken auth, mass assignment</li><li>Token/JWT handling &amp; rate limiting</li><li>1 complimentary retest of fixed findings</li></ul>
-          <a class="btn primary" href="index.html#contact">Request a quote</a>
-        </div>
-        <div class="price">
-          <h3>External Network Test</h3>
-          <p class="from">from $3,500</p>
-          <p class="note">Scoped by number of live hosts / IPs</p>
-          <ul><li>Attack-surface mapping &amp; enumeration</li><li>Vulnerability validation (no scanner-spam)</li><li>Hardening recommendations</li><li>1 complimentary retest of fixed findings</li></ul>
-          <a class="btn primary" href="index.html#contact">Request a quote</a>
-        </div>
-        <div class="price pop">
-          <span class="badge">HIGH VALUE</span>
-          <h3>Internal / Active Directory Test</h3>
-          <p class="from">from $6,500</p>
-          <p class="note">Scoped by hosts, domains &amp; assumed-breach goals</p>
-          <ul><li>AD enumeration &amp; credential attacks</li><li>Kerberos abuse, privilege escalation</li><li>Lateral movement &amp; domain-compromise paths</li><li>1 complimentary retest of fixed findings</li></ul>
-          <a class="btn primary" href="index.html#contact">Request a quote</a>
-        </div>
-        <div class="price">
-          <h3>Bundle: 2+ test types</h3>
-          <p class="from">save 10–15%</p>
-          <p class="note">Combine e.g. Web + API, or External + AD</p>
-          <ul><li>Single coordinated engagement</li><li>Unified report &amp; attack-path narrative</li><li>Best value for a fuller picture</li></ul>
-          <a class="btn" href="index.html#contact">Ask about bundles</a>
-        </div>
-        <div class="price">
-          <h3>Day Rate (custom work)</h3>
-          <p class="from">$1,400 <small>/ day</small></p>
-          <p class="note">For non-standard or exploratory scopes</p>
-          <ul><li>Transparent, time-boxed</li><li>Typical engagements: 3–8 days</li><li>Quoted after scoping call</li></ul>
-          <a class="btn" href="index.html#contact">Discuss custom scope</a>
-        </div>
+<footer class="foot">
+  <div class="wrap foot-cols">
+    <div>
+      <div style="display:flex; align-items:center; gap:10px; margin-bottom:10px;">
+        <img src="/assets/logo.svg" alt="" width="28" height="28" />
+        <div style="font-weight:700;color:rgba(255,255,255,.9);">Forethreat Security</div>
       </div>
-      <div class="micro" style="margin-top:14px;"><strong>Payment for one-off projects:</strong> 50% deposit to book, 50% on report delivery — or pay in full upfront for a <strong>5% discount</strong>. Card, ACH, or PayPal. Monthly installment plans available on engagements over $4,000.</div>
+      <div style="font-size:.9rem; max-width:34ch;">Founder-led penetration testing for web applications, APIs, networks, and Active Directory.</div>
     </div>
-  </section>
-
-  <!-- RETAINERS -->
-  <section>
-    <div class="wrap">
-      <div class="section-head"><div><h2>3 · Security Retainers (Recommended)</h2><p class="lead">Move from reactive to proactive. A predictable monthly relationship with scheduled testing, retesting, and direct access. Minimum 3 months; best value on 6–12.</p></div></div>
-      <div class="price-row">
-        <div class="price">
-          <h3>Essentials</h3>
-          <p class="from">$1,500 <small>/ month</small></p>
-          <p class="note">3-month minimum · for a single primary asset</p>
-          <ul><li>Scheduled testing of one asset type</li><li>Continuous vulnerability validation</li><li>Retesting after fixes</li><li>Email support · monthly check-in</li></ul>
-          <a class="btn" href="index.html#contact">Start Essentials</a>
-        </div>
-        <div class="price pop">
-          <span class="badge">MOST POPULAR</span>
-          <h3>Professional</h3>
-          <p class="from">$2,750 <small>/ month</small></p>
-          <p class="note">6-month term · for growing environments</p>
-          <ul><li>Rotating testing across Web, Network, API &amp; AD</li><li>Testing of new features &amp; releases</li><li>Unlimited retesting of fixed findings</li><li>Direct communication (Slack/email) + quarterly readout</li></ul>
-          <a class="btn primary" href="index.html#contact">Start Professional</a>
-        </div>
-        <div class="price">
-          <h3>PTaaS / Enterprise</h3>
-          <p class="from">from $4,500 <small>/ month</small></p>
-          <p class="note">Continuous testing retainer — senior-led, capacity-limited</p>
-          <ul><li>Ongoing, attacker-driven testing across your assets</li><li>Every new feature/update tested as it ships</li><li>Priority support &amp; rapid retesting</li><li>Attestation letters; reporting portal on the roadmap</li></ul>
-          <a class="btn" href="index.html#contact">Talk to our team</a>
-        </div>
-      </div>
-      <div class="micro" style="margin-top:14px;">
-        <strong>Limited capacity:</strong> to protect quality, only a few retainer clients are taken at a time — each gets direct, senior attention. &nbsp;·&nbsp;
-        <strong>One-time onboarding fee:</strong> $750 (waived on 12-month prepay). &nbsp;·&nbsp;
-        <strong>Prepay a year, get 2 months free</strong> (≈16% off). &nbsp;·&nbsp;
-        Retainers are billed monthly via secure Stripe subscription, or invoiced quarterly/annually (ACH preferred).
-      </div>
+    <div>
+      <h4>Testing</h4>
+      <a href="/web-application-penetration-testing.html">Web application testing</a>
+      <a href="/api-penetration-testing.html">API testing</a>
+      <a href="/network-penetration-testing.html">Network &amp; AD testing</a>
+      <a href="/pricing.html#retainers">Continuous testing</a>
     </div>
-  </section>
-
-  <!-- ADD-ONS -->
-  <section>
-    <div class="wrap">
-      <div class="section-head"><div><h2>4 · Add-Ons &amp; À La Carte</h2><p class="lead">Stack onto any engagement.</p></div></div>
-      <div class="card"><div class="card-body" style="padding:6px 10px;">
-        <table class="tbl">
-          <tr><th>Add-on</th><th>Price</th><th>Notes</th></tr>
-          <tr><td>Additional retest (beyond included)</td><td>$750</td><td>Verify remediation of fixed findings</td></tr>
-          <tr><td>Rush / expedited scheduling</td><td>+25–50%</td><td>Priority slot, compressed timeline</td></tr>
-          <tr><td>Phishing / social-engineering module</td><td>from $1,500</td><td>Authorized email phishing campaign</td></tr>
-          <tr><td>External + dark-web exposure check</td><td>$500</td><td>Leaked creds &amp; exposed assets</td></tr>
-          <tr><td>Letter of Attestation (for compliance/clients)</td><td>$500</td><td>Signed summary suitable for third parties</td></tr>
-          <tr><td>Executive readout presentation (live)</td><td>$350</td><td>Stakeholder-facing walkthrough</td></tr>
-          <tr><td>Remediation re-architecture consult</td><td>$1,400 / day</td><td>Hands-on hardening guidance</td></tr>
-        </table>
-      </div></div>
+    <div>
+      <h4>Company</h4>
+      <a href="/about.html">About</a>
+      <a href="/sample-report.html">Sample report</a>
+      <a href="/partners.html">MSP &amp; partner program</a>
+      <a href="/training.html">Training &amp; mentorship</a>
+      <a href="/legal.html">Legal &amp; privacy</a>
     </div>
-  </section>
-
-  <!-- TRAINING TEASER -->
-  <section>
-    <div class="wrap">
-      <div class="section-head"><div><h2>5 · Training &amp; Bootcamps</h2><p class="lead">1-on-1 coaching and immersive bootcamps in offensive security.</p></div></div>
-      <div class="cta"><a class="btn primary" href="training.html">See training &amp; bootcamp pricing →</a></div>
+    <div>
+      <h4>Contact</h4>
+      <a href="/contact.html">Book a scoping call</a>
+      <a href="mailto:belizaire@forethreatsec.com">belizaire@forethreatsec.com</a>
+      <a href="https://www.linkedin.com/in/belizaireb" target="_blank" rel="noopener">LinkedIn ↗</a>
     </div>
-  </section>
-
-  <!-- PAYMENT OPTIONS -->
-  <section id="payment">
-    <div class="wrap">
-      <div class="section-head"><div><h2>Payment Options</h2><p class="lead">Flexible, secure, and built for businesses and individuals alike.</p></div></div>
-      <div class="grid3">
-        <div class="svc"><h3>Pay by Card or ACH</h3><p>Secure checkout via <strong>Stripe</strong>. Cards, Apple/Google Pay, and bank ACH (lower fees for larger invoices).</p>
-          <div class="cta"><a class="btn primary" href="https://buy.stripe.com/eVq28r1ByadP1nb5EW2VG0t" target="_blank" rel="noopener">Pay an invoice ↗</a></div></div>
-        <div class="svc"><h3>PayPal</h3><p>Prefer PayPal? Pay deposits, invoices, or training fees directly. PayPal Pay Later available on eligible amounts.</p>
-          <div class="cta"><a class="btn" href="https://paypal.me/forethreatsec" target="_blank" rel="noopener">Pay with PayPal ↗</a></div></div>
-        <div class="svc"><h3>Installment Plans</h3><p>Split larger engagements and bootcamps into monthly payments via Stripe (and Klarna/Affirm where eligible). Ask for a plan when you book.</p>
-          <div class="cta"><a class="btn" href="index.html#contact">Request a plan</a></div></div>
-      </div>
-      <div class="micro" style="margin-top:14px;">All payments are tied to a signed engagement agreement and authorization. Deposits are non-refundable once testing begins. Full terms in your proposal &amp; <a href="legal.html" class="accent">legal documents</a>.</div>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="foot">
-    <div class="wrap foot-cols">
-      <div>
-        <div style="display:flex; align-items:center; gap:10px; margin-bottom:10px;">
-          <img src="assets/logo.svg" alt="" width="28" height="28" />
-          <div style="font-weight:700;color:rgba(255,255,255,.9);">Forethreat Security</div>
-        </div>
-        <div style="font-size:.9rem; max-width:34ch;">Understand threats before they strike. Authorized offensive security testing and training.</div>
-      </div>
-      <div>
-        <h4>Services</h4>
-        <a href="index.html#services">Penetration Testing</a>
-        <a href="pricing.html">PTaaS &amp; Retainers</a>
-        <a href="index.html#baseline">Free Baseline</a>
-        <a href="training.html">Training</a>
-      </div>
-      <div>
-        <h4>Company</h4>
-        <a href="about.html">About</a>
-        <a href="pricing.html">Pricing</a>
-        <a href="legal.html">Terms &amp; Legal</a>
-      </div>
-      <div>
-        <h4>Contact</h4>
-        <a href="mailto:belizaire@forethreatsec.com">Email us</a>
-        <a href="https://www.linkedin.com/in/belizaireb" target="_blank" rel="noopener">LinkedIn ↗</a>
-        <a href="index.html#contact">Book a call</a>
-      </div>
-    </div>
-    <div class="wrap foot-bottom">
-      <span>© <span id="yr">2026</span> Forethreat Security LLC. All rights reserved.</span>
-      <span>Authorized testing only · Evidence-driven reporting</span>
-    </div>
-  </footer>
-  <script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
+  </div>
+  <div class="wrap foot-bottom">
+    <span>© <span id="yr">2026</span> Forethreat Security LLC, a Florida limited liability company.</span>
+    <span>Testing performed only under written authorization.</span>
+  </div>
+</footer>
 </body>
 </html>

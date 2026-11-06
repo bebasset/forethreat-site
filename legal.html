@@ -3,97 +3,123 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Forethreat legal — authorization policy, terms summary, privacy, and the documents that govern every engagement." />
-  <title>Legal — Forethreat</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="style.css" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://plausible.io https://static.cloudflareinsights.com; connect-src 'self' https://formspree.io https://api.web3forms.com https://plausible.io https://cloudflareinsights.com; img-src 'self' data:; style-src 'self' 'unsafe-inline'; font-src 'self'; base-uri 'self'; object-src 'none'; form-action 'self' https://formspree.io https://api.web3forms.com; upgrade-insecure-requests" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <title>Legal, Authorization Policy & Privacy | Forethreat Security</title>
+  <meta name="description" content="How Forethreat Security authorizes, scopes, and handles penetration testing engagements, and how this website handles your information." />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://forethreatsec.com/legal.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Forethreat Security" />
+  <meta property="og:title" content="Legal, Authorization Policy & Privacy | Forethreat Security" />
+  <meta property="og:description" content="How Forethreat Security authorizes, scopes, and handles penetration testing engagements, and how this website handles your information." />
+  <meta property="og:url" content="https://forethreatsec.com/legal.html" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="theme-color" content="#070A12" />
+  <link rel="icon" href="/assets/logo.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="/style.css" />
+  <script src="/assets/site.js" defer></script>
 </head>
 <body>
-  <div class="nav">
-    <div class="wrap nav-inner">
-      <a class="brand" href="index.html"><img src="assets/logo.svg" alt="Forethreat" /><span>Forethreat Security</span></a>
-      <div class="nav-links">
-        <a href="index.html#services">Services</a>
-        <a href="index.html#process">Process</a>
-        <a href="pricing.html">Pricing</a>
-        <a href="training.html">Training</a>
-        <a href="about.html">About</a>
-        <a class="nav-cta" href="index.html#contact">Book a call →</a>
+<a class="skip" href="#main">Skip to content</a>
+<div class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="/"><img src="/assets/logo.svg" alt="" width="30" height="30" /><span>Forethreat Security</span></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+    <nav class="nav-links" id="nav-links" aria-label="Main">
+      <a href="/web-application-penetration-testing.html">Web Apps</a>
+      <a href="/api-penetration-testing.html">APIs</a>
+      <a href="/network-penetration-testing.html">Network &amp; AD</a>
+      <a href="/pricing.html">Pricing</a>
+      <a href="/partners.html">For MSPs</a>
+      <a href="/about.html">About</a>
+      <a class="nav-cta" href="/contact.html" data-track="CTA: Nav Scoping Call">Book a scoping call</a>
+    </nav>
+  </div>
+</div>
+<header class="hero simple"><div class="wrap">
+  <div class="eyebrow"><div class="line"></div><div>Legal &amp; Privacy</div></div>
+  <h1>Clear rules. <span>Always authorized.</span></h1>
+  <p class="sub">Forethreat performs security testing only under explicit written authorization. Below is a plain-language summary of how engagements are governed and how this website handles your information.</p>
+</div></header>
+
+<main id="main">
+<section><div class="wrap prose">
+  <h2>Company</h2>
+  <p>Forethreat Security LLC is a Florida limited liability company. Contact: <a class="accent" href="mailto:belizaire@forethreatsec.com">belizaire@forethreatsec.com</a>.</p>
+
+  <h2>Authorization policy</h2>
+  <p>No testing is performed against any system without (1) a signed services agreement, (2) an agreed written scope and rules of engagement, and (3) a signed Authorization to Test from a party with authority to grant it.
+    If a target is hosted or operated by a third party (e.g., a cloud or SaaS provider), that provider's testing policy applies and any required permission must be obtained before testing.
+    For engagements arranged through a partner (such as a managed service provider), the system owner must also authorize testing directly.</p>
+
+  <h2>Engagement documents</h2>
+  <ul>
+    <li><strong>Master Services Agreement (MSA)</strong>: the overarching legal terms.</li>
+    <li><strong>Statement of Work (SOW)</strong>: scope, deliverables, timeline, and fees for a specific engagement.</li>
+    <li><strong>Rules of Engagement (RoE)</strong>: testing windows, constraints, emergency contacts, and data-handling rules.</li>
+    <li><strong>Authorization to Test</strong>: written consent to conduct the testing described in the SOW.</li>
+    <li><strong>Mutual NDA</strong>: available before scoping on request.</li>
+  </ul>
+  <p>Training participants agree to a Training Services Agreement and an acceptable-use and ethics policy.</p>
+
+  <h2>Confidentiality &amp; engagement data</h2>
+  <p>Findings, client data, and engagement artifacts are confidential. They are stored encrypted, shared only with authorized client contacts, and retained only as long as the agreement specifies, then securely destroyed.
+    Client names, logos, findings, and testimonials are never published without the client's written permission.</p>
+
+  <h2>No guarantees</h2>
+  <p>Penetration testing is a point-in-time, best-effort assessment of an agreed scope. It cannot guarantee that every vulnerability will be found, that any specific number of findings will be reported, or that a breach will be prevented.
+    A penetration test report does not by itself certify compliance with any standard or regulation. Services are subject to the limitation of liability in the signed agreement.</p>
+
+  <h2 id="privacy">Website privacy notice</h2>
+  <p><strong>What we collect.</strong> If you submit the contact form or email us, we receive what you provide: typically your name, work email, company, role, and a description of your testing needs.
+    We ask you not to send credentials, network details, or vulnerability information through the form.</p>
+  <p><strong>How it's used.</strong> Only to respond to your inquiry, scope and propose services, and keep business records of our correspondence. We don't sell or rent personal information, and we don't add you to marketing lists without your consent.</p>
+  <p><strong>Service providers.</strong> Form submissions may be delivered through a form-processing provider, and email is hosted by our email provider. Payments are processed by Stripe or PayPal. Forethreat never sees or stores full card numbers.
+    If we enable website analytics, we use a privacy-focused, cookie-free service that records aggregate page and button-click counts, not personal profiles.</p>
+  <p><strong>Retention &amp; your choices.</strong> Inquiry records are kept as long as needed for the business relationship and our legal obligations. To access, correct, or delete your information, email <a class="accent" href="mailto:belizaire@forethreatsec.com">belizaire@forethreatsec.com</a>.</p>
+  <p><strong>Downloads.</strong> PDF guides on this site can be downloaded without providing any information.</p>
+
+  <div class="micro"><strong>Note:</strong> This page is a plain-language summary, not a contract. Your signed engagement documents control. Last updated November 2026.</div>
+  <div class="cta" style="margin-top:18px;"><a class="btn signal" href="contact.html">Request the engagement documents →</a></div>
+</div></section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-cols">
+    <div>
+      <div style="display:flex; align-items:center; gap:10px; margin-bottom:10px;">
+        <img src="/assets/logo.svg" alt="" width="28" height="28" />
+        <div style="font-weight:700;color:rgba(255,255,255,.9);">Forethreat Security</div>
       </div>
+      <div style="font-size:.9rem; max-width:34ch;">Founder-led penetration testing for web applications, APIs, networks, and Active Directory.</div>
+    </div>
+    <div>
+      <h4>Testing</h4>
+      <a href="/web-application-penetration-testing.html">Web application testing</a>
+      <a href="/api-penetration-testing.html">API testing</a>
+      <a href="/network-penetration-testing.html">Network &amp; AD testing</a>
+      <a href="/pricing.html#retainers">Continuous testing</a>
+    </div>
+    <div>
+      <h4>Company</h4>
+      <a href="/about.html">About</a>
+      <a href="/sample-report.html">Sample report</a>
+      <a href="/partners.html">MSP &amp; partner program</a>
+      <a href="/training.html">Training &amp; mentorship</a>
+      <a href="/legal.html">Legal &amp; privacy</a>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <a href="/contact.html">Book a scoping call</a>
+      <a href="mailto:belizaire@forethreatsec.com">belizaire@forethreatsec.com</a>
+      <a href="https://www.linkedin.com/in/belizaireb" target="_blank" rel="noopener">LinkedIn ↗</a>
     </div>
   </div>
-
-  <header class="hero"><div class="wrap">
-    <div class="eyebrow"><div class="line"></div><div>Legal &amp; Ethics</div></div>
-    <h1>Clear rules. <span>Always authorized.</span></h1>
-    <p class="sub" style="max-width:72ch;">Forethreat performs offensive security testing only under explicit written authorization. The documents below govern every engagement and protect both you and us.</p>
-  </div></header>
-
-  <section><div class="wrap prose">
-    <h2>Authorization policy</h2>
-    <p>No testing is performed against any system without (1) a signed services agreement, (2) an agreed written scope and rules of engagement, and (3) a signed Authorization to Test from a party with the authority to grant it. If a target is hosted by a third party (e.g., a cloud provider), additional provider authorization may be required and is the client's responsibility to confirm.</p>
-
-    <h2>Engagement documents</h2>
-    <p>Each client engagement is governed by a standard document set. We provide these for signature before work begins:</p>
-    <ul>
-      <li><strong>Master Services Agreement (MSA)</strong> — the overarching legal terms.</li>
-      <li><strong>Statement of Work (SOW)</strong> — scope, deliverables, timeline, and fees for the specific engagement.</li>
-      <li><strong>Rules of Engagement (RoE)</strong> — testing windows, constraints, emergency contacts, and handling rules.</li>
-      <li><strong>Authorization to Test</strong> — written consent to conduct the authorized testing.</li>
-      <li><strong>Mutual NDA</strong> — protection of confidential information on both sides.</li>
-    </ul>
-    <p>Training and bootcamp participants additionally agree to a <strong>Training Services Agreement</strong> and a <strong>Code of Conduct / Acceptable-Use &amp; Ethics policy</strong>.</p>
-
-    <h2>Confidentiality &amp; data handling</h2>
-    <p>Findings, client data, and engagement artifacts are treated as strictly confidential, stored securely, and retained only as long as needed to deliver and support the engagement, after which they are securely destroyed on request and per the agreement.</p>
-
-    <h2>Privacy</h2>
-    <p>This website does not sell personal information. Information you submit (e.g., by email) is used solely to respond to your inquiry and deliver services. Payment processing is handled by third-party processors (Stripe, PayPal); Forethreat does not store full card numbers.</p>
-
-    <h2>No warranty / limitation</h2>
-    <p>Penetration testing is a point-in-time, best-effort activity and cannot guarantee discovery of every vulnerability or prevent all breaches. Services are provided subject to the limitation of liability set out in the signed agreement.</p>
-
-    <div class="micro"><strong>Note:</strong> This page is a plain-language summary, not the contract itself. The signed engagement documents control. Forethreat Security LLC is the contracting entity (registration pending). For the full templates, request them during scoping.</div>
-
-    <div class="cta" style="margin-top:18px;"><a class="btn signal" href="index.html#contact">Request the engagement documents ↗</a></div>
-  </div></section>
-
-  <!-- FOOTER -->
-  <footer class="foot">
-    <div class="wrap foot-cols">
-      <div>
-        <div style="display:flex; align-items:center; gap:10px; margin-bottom:10px;">
-          <img src="assets/logo.svg" alt="" width="28" height="28" />
-          <div style="font-weight:700;color:rgba(255,255,255,.9);">Forethreat Security</div>
-        </div>
-        <div style="font-size:.9rem; max-width:34ch;">Understand threats before they strike. Authorized offensive security testing and training.</div>
-      </div>
-      <div>
-        <h4>Services</h4>
-        <a href="index.html#services">Penetration Testing</a>
-        <a href="pricing.html">PTaaS &amp; Retainers</a>
-        <a href="index.html#baseline">Free Baseline</a>
-        <a href="training.html">Training</a>
-      </div>
-      <div>
-        <h4>Company</h4>
-        <a href="about.html">About</a>
-        <a href="pricing.html">Pricing</a>
-        <a href="legal.html">Terms &amp; Legal</a>
-      </div>
-      <div>
-        <h4>Contact</h4>
-        <a href="mailto:belizaire@forethreatsec.com">Email us</a>
-        <a href="https://www.linkedin.com/in/belizaireb" target="_blank" rel="noopener">LinkedIn ↗</a>
-        <a href="index.html#contact">Book a call</a>
-      </div>
-    </div>
-    <div class="wrap foot-bottom">
-      <span>© <span id="yr">2026</span> Forethreat Security LLC. All rights reserved.</span>
-      <span>Authorized testing only · Evidence-driven reporting</span>
-    </div>
-  </footer>
-  <script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
+  <div class="wrap foot-bottom">
+    <span>© <span id="yr">2026</span> Forethreat Security LLC, a Florida limited liability company.</span>
+    <span>Testing performed only under written authorization.</span>
+  </div>
+</footer>
 </body>
 </html>

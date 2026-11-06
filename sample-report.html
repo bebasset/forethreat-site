@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://plausible.io https://static.cloudflareinsights.com; connect-src 'self' https://formspree.io https://api.web3forms.com https://plausible.io https://cloudflareinsights.com; img-src 'self' data:; style-src 'self' 'unsafe-inline'; font-src 'self'; base-uri 'self'; object-src 'none'; form-action 'self' https://formspree.io https://api.web3forms.com; upgrade-insecure-requests" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <title>Sample Penetration Test Report (Web App & API) | Forethreat Security</title>
+  <meta name="description" content="A sample Forethreat penetration test report against a fictional SaaS application: executive summary, scope, CVSS-rated findings, an attack-path narrative, reproduction steps, remediation, and retest status." />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://forethreatsec.com/sample-report.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Forethreat Security" />
+  <meta property="og:title" content="Sample Penetration Test Report (Web App & API) | Forethreat Security" />
+  <meta property="og:description" content="A sample Forethreat penetration test report against a fictional SaaS application: executive summary, scope, CVSS-rated findings, an attack-path narrative, reproduction steps, remediation, and retest status." />
+  <meta property="og:url" content="https://forethreatsec.com/sample-report.html" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="theme-color" content="#070A12" />
+  <link rel="icon" href="/assets/logo.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="/style.css" />
+  <script src="/assets/site.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="/"><img src="/assets/logo.svg" alt="" width="30" height="30" /><span>Forethreat Security</span></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+    <nav class="nav-links" id="nav-links" aria-label="Main">
+      <a href="/web-application-penetration-testing.html">Web Apps</a>
+      <a href="/api-penetration-testing.html">APIs</a>
+      <a href="/network-penetration-testing.html">Network &amp; AD</a>
+      <a href="/pricing.html">Pricing</a>
+      <a href="/partners.html">For MSPs</a>
+      <a href="/about.html">About</a>
+      <a class="nav-cta" href="/contact.html" data-track="CTA: Nav Scoping Call">Book a scoping call</a>
+    </nav>
+  </div>
+</div>
+<header class="hero simple" style="padding-bottom:16px;">
+  <div class="wrap">
+    <div class="eyebrow"><div class="line"></div><div>Sample report · Web application &amp; API</div></div>
+    <h1>What your report <span>will look like.</span></h1>
+    <p class="sub">This is an abridged sample against a <b>fictional</b> company, written in the same format and level of detail as a real Forethreat report.</p>
+    <p class="stamp">FICTIONAL SAMPLE. "Harborline Analytics" does not exist. No client data, findings, or systems are depicted.</p>
+  </div>
+</header>
+
+<main id="main">
+<section>
+  <div class="wrap report text" style="max-width:900px;">
+    <h2>1. Executive summary</h2>
+    <p>Forethreat performed a grey-box penetration test of the Harborline Analytics customer portal and its REST API between <b>[dates]</b>, using accounts in two separate customer tenants and three roles (Viewer, Analyst, Org Admin).</p>
+    <p><b>Overall risk: High.</b> Any logged-in user could promote themselves to Org Admin, and Org Admins could read and modify invoices belonging to <em>other customers</em>.
+      Chained together, these two issues allow any free-trial user to access every customer's billing records. Both issues were fixed during the engagement and confirmed fixed at retest.</p>
+    <div class="card" style="margin:14px 0;"><div class="card-body" style="padding:6px 10px;overflow-x:auto;">
+      <table class="tbl">
+        <thead><tr><th>ID</th><th>Finding</th><th>Severity (CVSS 3.1)</th><th>Retest status</th></tr></thead>
+        <tbody>
+          <tr><td>HA-01</td><td>Cross-tenant invoice access and modification (BOLA)</td><td><span class="sev high">HIGH 8.1</span></td><td>Fixed ✓</td></tr>
+          <tr><td>HA-02</td><td>Privilege escalation via mass assignment of <code>role</code></td><td><span class="sev high">HIGH 8.1</span></td><td>Fixed ✓</td></tr>
+          <tr><td>HA-03</td><td>Password reset tokens reusable and valid for 24 hours</td><td><span class="sev med">MEDIUM 6.8</span></td><td>Fixed ✓</td></tr>
+          <tr><td>HA-04</td><td>Stored XSS in invoice memo rendered in admin preview</td><td><span class="sev med">MEDIUM 5.4</span></td><td>Partially fixed</td></tr>
+          <tr><td>HA-05</td><td>Account enumeration via password reset responses</td><td><span class="sev med">MEDIUM 5.3</span></td><td>Accepted risk</td></tr>
+        </tbody>
+      </table>
+    </div></div>
+
+    <h2>2. Scope &amp; approach</h2>
+    <ul>
+      <li><b>In scope:</b> <code>portal.harborline.example</code> and <code>api.harborline.example/v2</code> (staging, production-equivalent data)</li>
+      <li><b>Out of scope:</b> payment processor, corporate email, denial-of-service</li>
+      <li><b>Methodology:</b> OWASP WSTG v4.2 and OWASP API Security Top 10 (2023); 47 API endpoints tested (coverage list in Appendix A)</li>
+      <li><b>Accounts:</b> 2 tenants × 3 roles, provided by the client</li>
+    </ul>
+
+    <h2>3. Attack path</h2>
+    <p>The highest-impact result came from chaining two separate issues:</p>
+    <ol>
+      <li>A Viewer in Tenant A sends <code>"role":"org_admin"</code> in a profile update and becomes an Org Admin (HA-02).</li>
+      <li>As Org Admin, the user requests invoices by sequential ID. The API checks the role but not the tenant (HA-01).</li>
+      <li>Result: any self-registered trial user can read and edit every customer's invoices, including names, addresses, and amounts.</li>
+    </ol>
+
+    <h2>4. Example finding detail</h2>
+    <h3>HA-01: Cross-tenant invoice access and modification (BOLA) <span class="sev high">HIGH 8.1</span></h3>
+    <p><b>CVSS:</b> <code>AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N</code> · <b>OWASP:</b> API1:2023 Broken Object Level Authorization · <b>Affected:</b> <code>GET|PATCH /v2/invoices/{id}</code></p>
+    <p><b>Description.</b> The invoice endpoints confirm that the caller holds the Org Admin role, but not that the requested invoice belongs to the caller's organization. Invoice IDs are sequential integers, so every invoice can be enumerated.</p>
+    <p><b>Reproduction.</b> Authenticated as Org Admin in Tenant A (<code>org_id 1042</code>), request an invoice owned by Tenant B:</p>
+<pre>GET /v2/invoices/88317 HTTP/2
+Host: api.harborline.example
+Authorization: Bearer eyJhbGciOi…[Tenant A token]
+
+HTTP/2 200 OK
+{"id":88317,"org_id":1077,"customer_name":"[Tenant B customer]","amount":"4,980.00","status":"open", …}</pre>
+    <p>A <code>PATCH</code> with <code>{"status":"void"}</code> to the same ID also succeeded, so the issue affects integrity as well as confidentiality.</p>
+    <p><b>Business impact.</b> Exposure and tampering of every customer's billing records. A reportable incident under most customer contracts and a likely deal-breaker in enterprise security reviews.</p>
+    <p><b>Remediation.</b> Enforce object ownership on the server for every invoice operation, scoping the query by the authenticated user's <code>org_id</code> (e.g., <code>WHERE id = :id AND org_id = :caller_org</code>) rather than checking the role alone.
+      Return <code>404</code> for objects in other tenants. Add automated authorization tests that run each endpoint with a token from a second tenant. Consider non-sequential identifiers as defense in depth (not as the fix).</p>
+    <p><b>Retest.</b> Re-tested on <b>[date]</b>: cross-tenant <code>GET</code> and <code>PATCH</code> now return <code>404</code>. The same check was confirmed on <code>/v2/payments</code> and <code>/v2/exports</code>. <b>Status: Fixed.</b></p>
+
+    <h2>5. What else is in a full report</h2>
+    <ul>
+      <li>Every finding in the detail format above, with screenshots</li>
+      <li>Positive observations: controls that held up under testing</li>
+      <li>Appendix A: endpoints/features tested · Appendix B: tools and testing timeline</li>
+      <li>Retest report with updated status, plus an attestation letter where included</li>
+    </ul>
+
+    <div class="ctaband" style="margin-top:30px;">
+      <div><h2>Want this for your application?</h2><p>Book a 30-minute scoping call and get a fixed-fee proposal.</p></div>
+      <div class="cta"><a class="btn signal" href="contact.html" data-track="CTA: Sample Report Scoping Call">Book a scoping call →</a></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-cols">
+    <div>
+      <div style="display:flex; align-items:center; gap:10px; margin-bottom:10px;">
+        <img src="/assets/logo.svg" alt="" width="28" height="28" />
+        <div style="font-weight:700;color:rgba(255,255,255,.9);">Forethreat Security</div>
+      </div>
+      <div style="font-size:.9rem; max-width:34ch;">Founder-led penetration testing for web applications, APIs, networks, and Active Directory.</div>
+    </div>
+    <div>
+      <h4>Testing</h4>
+      <a href="/web-application-penetration-testing.html">Web application testing</a>
+      <a href="/api-penetration-testing.html">API testing</a>
+      <a href="/network-penetration-testing.html">Network &amp; AD testing</a>
+      <a href="/pricing.html#retainers">Continuous testing</a>
+    </div>
+    <div>
+      <h4>Company</h4>
+      <a href="/about.html">About</a>
+      <a href="/sample-report.html">Sample report</a>
+      <a href="/partners.html">MSP &amp; partner program</a>
+      <a href="/training.html">Training &amp; mentorship</a>
+      <a href="/legal.html">Legal &amp; privacy</a>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <a href="/contact.html">Book a scoping call</a>
+      <a href="mailto:belizaire@forethreatsec.com">belizaire@forethreatsec.com</a>
+      <a href="https://www.linkedin.com/in/belizaireb" target="_blank" rel="noopener">LinkedIn ↗</a>
+    </div>
+  </div>
+  <div class="wrap foot-bottom">
+    <span>© <span id="yr">2026</span> Forethreat Security LLC, a Florida limited liability company.</span>
+    <span>Testing performed only under written authorization.</span>
+  </div>
+</footer>
+</body>
+</html>
