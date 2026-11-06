@@ -25,6 +25,11 @@ var FT_CONFIG = {
   // intro-call link here. While null, the "pick a time" button stays hidden.
   SCHEDULING_URL: null,
 
+  // Cloudflare Web Analytics (free, cookie-free page views). Cloudflare dashboard →
+  // Analytics & Logs → Web Analytics → Add site → copy the token from the snippet.
+  // While null, no analytics script loads.
+  CF_ANALYTICS_TOKEN: null,
+
   CONTACT_EMAIL: 'belizaire@forethreatsec.com'
 };
 
@@ -46,6 +51,15 @@ var FT_CONFIG = {
     var el = e.target.closest ? e.target.closest('[data-track]') : null;
     if (el) track(el.getAttribute('data-track'), { page: location.pathname, label: (el.textContent || '').trim().slice(0, 60) });
   });
+
+  /* ---- Cloudflare Web Analytics (loads only when configured) --------- */
+  if (FT_CONFIG.CF_ANALYTICS_TOKEN && location.hostname === 'forethreatsec.com') {
+    var cf = document.createElement('script');
+    cf.defer = true;
+    cf.src = 'https://static.cloudflareinsights.com/beacon.min.js';
+    cf.setAttribute('data-cf-beacon', JSON.stringify({ token: FT_CONFIG.CF_ANALYTICS_TOKEN }));
+    document.head.appendChild(cf);
+  }
 
   /* ---- Footer year ---------------------------------------------------- */
   var yr = document.getElementById('yr');
