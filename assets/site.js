@@ -11,9 +11,14 @@ var FT_CONFIG = {
   //   'formspree' → FORM_ENDPOINT = 'https://formspree.io/f/xxxxxxx'
   //   'web3forms' → FORM_ENDPOINT = 'https://api.web3forms.com/submit', FORM_ACCESS_KEY = '<key>'
   // While FORM_PROVIDER is null, the form opens a pre-filled email instead.
-  FORM_PROVIDER: null,
-  FORM_ENDPOINT: null,
+  FORM_PROVIDER: 'formspree',
+  FORM_ENDPOINT: 'https://formspree.io/f/xrppdjbp',
   FORM_ACCESS_KEY: null,
+
+  // Cloudflare Turnstile CAPTCHA (free). Paste the SITE key here (public by
+  // design); the SECRET key goes only into Formspree → form Settings → CAPTCHA.
+  // Only used when a form provider is configured above.
+  TURNSTILE_SITE_KEY: '0x4AAAAAAF1kLJZ_DuF0zLvY',
 
   // Scheduling page for a dedicated "Security Scoping Call" (Google Calendar
   // appointment schedule, Calendly, Cal.com…). Do NOT reuse the mentorship
@@ -88,6 +93,21 @@ var FT_CONFIG = {
   var status = document.getElementById('form-status');
   var submitBtn = form.querySelector('button[type="submit"]');
   var started = Date.now();
+  var captchaOn = !!(FT_CONFIG.FORM_PROVIDER && FT_CONFIG.FORM_ENDPOINT && FT_CONFIG.TURNSTILE_SITE_KEY);
+  var captchaBox = document.getElementById('captcha');
+  if (captchaOn && captchaBox) {
+    captchaBox.className = 'cf-turnstile';
+    captchaBox.setAttribute('data-sitekey', FT_CONFIG.TURNSTILE_SITE_KEY);
+    captchaBox.setAttribute('data-theme', 'dark');
+    captchaBox.hidden = false;
+    var ts = document.createElement('script');
+    ts.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js';
+    ts.async = true; ts.defer = true;
+    document.head.appendChild(ts);
+  }
+  function resetCaptcha() {
+    try { if (captchaOn && window.turnstile) window.turnstile.reset(captchaBox); } catch (e) {}
+  }
 
   function setStatus(msg, kind) {
     status.textContent = msg;
@@ -98,7 +118,7 @@ var FT_CONFIG = {
     var data = {};
     var fd = new FormData(form);
     fd.forEach(function (v, k) {
-      if (k === '_gotcha') return;
+      if (k === '_gotcha' || k === 'cf-turnstile-response') return;
       if (data[k]) data[k] = data[k] + ', ' + v; else data[k] = v;
     });
     return data;
@@ -156,25 +176,56 @@ var FT_CONFIG = {
       return;
     }
 
+    var token = '';
+    if (captchaOn) {
+      var tokEl = form.querySelector('input[name="cf-turnstile-response"]');
+      token = tokEl ? tokEl.value : '';
+      if (!token) {
+        setStatus('Please complete the quick verification check above the button, then send again.', 'err');
+        return;
+      }
+    }
+
     var payload = Object.assign({}, data, {
       subject: 'Pentest scoping request — ' + (data.company || data.name || ''),
       page: location.pathname
     });
     if (FT_CONFIG.FORM_PROVIDER === 'web3forms') payload.access_key = FT_CONFIG.FORM_ACCESS_KEY;
+    if (token) payload['cf-turnstile-response'] = token;
 
     submitBtn.disabled = true;
     submitBtn.textContent = 'Sending…';
-    fetch(FT_CONFIG.FORM_ENDPOINT, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-      body: JSON.stringify(payload)
-    }).then(function (r) {
-      if (!r.ok) throw new Error('HTTP ' + r.status);
+    // Formspree: send as form fields (matches Formspree's documented Turnstile flow).
+    // Web3Forms: JSON.
+    var req;
+    if (FT_CONFIG.FORM_PROVIDER === 'formspree') {
+      var fd = new FormData();
+      Object.keys(payload).forEach(function (k) { fd.append(k, payload[k]); });
+      req = { method: 'POST', headers: { 'Accept': 'application/json' }, body: fd };
+    } else {
+      req = { method: 'POST', headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' }, body: JSON.stringify(payload) };
+    }
+    fetch(FT_CONFIG.FORM_ENDPOINT, req).then(function (r) {
+      if (!r.ok) {
+        return r.json().catch(function () { return {}; }).then(function (j) {
+          var msg = (j && j.errors && j.errors[0] && j.errors[0].message) || '';
+          if (/captcha|turnstile/i.test(msg) || /captcha|turnstile/i.test((j && j.error) || '')) {
+            resetCaptcha();
+            var e = new Error('captcha'); e.captcha = true; throw e;
+          }
+          throw new Error('HTTP ' + r.status);
+        });
+      }
       form.reset();
       form.hidden = true;
       document.getElementById('form-done').hidden = false;
       track('Lead Delivered', { page: location.pathname });
-    }).catch(function () {
+    }).catch(function (err) {
+      if (err && err.captcha) {
+        setStatus('The verification check expired. Please complete it again and resend.', 'err');
+        return;
+      }
+      resetCaptcha();
       setStatus('Something went wrong sending the form. Please email ' + FT_CONFIG.CONTACT_EMAIL + ' — nothing you entered was lost; we will open your email app now.', 'err');
       mailtoFallback(data);
     }).finally(function () {
